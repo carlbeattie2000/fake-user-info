@@ -1,7 +1,8 @@
 const crypto = require("crypto");
+const PATH = require("path");
 const fs = require("fs");
 
-const __DATA_PATH = "/mnt/c/Users/jimmy/documents/development/!projects/javascript/onlinebankingcrud/dataSets/";
+const __DATA_PATH = PATH.join(__dirname, "..\\dataSets\\userPrivateInfo\\");
 
 function getJSONContentArray(filePath) {
   return JSON.parse(fs.readFileSync(__DATA_PATH + filePath, "utf8")).content;
@@ -51,7 +52,7 @@ function randomIP6() {
 
 function randomDomainName() {
   let domains = [".com", ".co.uk", ".org", ".io", ".tech", ".uk", ".org", ".eu", ".london", ".me", ".ltd", ".me.uk"];
-  let domainName = getJSONContentArray("userPrivateInfo/domains.json");
+  let domainName = getJSONContentArray("domains.json");
   return domainName[randomMinMax(0, domainName.length - 1)] + domains[randomMinMax(0, domains.length - 1)];
 }
 
@@ -60,7 +61,7 @@ function randomURL() {
 }
 
 function randomUserAgent() {
-  let userAgents = getJSONContentArray("userPrivateInfo/userAgents.json");
+  let userAgents = getJSONContentArray("userAgents.json");
 
   return userAgents[randomMinMax(0, userAgents.length - 1)];
 }
@@ -74,3 +75,15 @@ const createArrayOfDomains = (amount) => [...Array(amount)].map(() => randomDoma
 const createArrayOfURLS = (amount) => [...Array(amount)].map(() => randomURL());
 
 const createArrayOfUserAgents = (amount) => [...Array(amount)].map(() => randomUserAgent());
+
+module.exports = {
+  randomIP4,
+  randomIP6,
+  randomDomainName,
+  randomURL,
+  createArrayOfIP4,
+  createArrayOfIP6,
+  createArrayOfDomains,
+  createArrayOfURLS,
+  createArrayOfUserAgents,
+};

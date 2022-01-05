@@ -2,9 +2,9 @@
 // FirstName, LastName, MiddleName, phone, email, address
 const crypto = require("crypto");
 const fs = require("fs");
+const PATH = require("path");
 
-const __DATA_PATH =
-  "/mnt/c/Users/jimmy/documents/development/!projects/javascript/onlinebankingcrud/dataSets/userInfo/";
+const __DATA_PATH = PATH.join(__dirname, "..\\dataSets\\userInfo\\");
 
 function randomMinMax(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -60,9 +60,10 @@ function createRandomEmail(first_name, last_name) {
   return first_name + last_name + "@" + domains[randomMinMax(0, domains.length)];
 }
 
+// This takes a little too long to complete due to the large data set
 function randomPostcode() {
   let postcode = getJSONContentArray("postCodes.json");
-
+  console.log("done");
   return postcode[randomMinMax(0, postcode.length - 1)];
 }
 
@@ -80,9 +81,9 @@ function randomCity() {
   return city[randomMinMax(0, city.length - 1)];
 }
 
-function randomCountie() {
-  let countie = getJSONContentArray("counties.json");
-  return countie[randomMinMax(0, countie.length - 1)];
+function randomCounty() {
+  let county = getJSONContentArray("counties.json");
+  return county[randomMinMax(0, county.length - 1)];
 }
 
 function createAddressObject(owner = "") {
@@ -92,12 +93,13 @@ function createAddressObject(owner = "") {
     addressDoorNumber: randomDoorNumber(),
     addressStreetName: randomStreetName(),
     addressCity: randomCity(),
-    addressCountie: randomCountie(),
+    addressCounty: randomCounty(),
     addressPostCode: randomPostcode(),
   };
 }
 
 function createUserObject() {
+  // first name, last name, middle name, mobile number, home number, email
   let namef = createRandomName("firstName");
   let namel = createRandomName("lastName");
   return {
@@ -110,6 +112,26 @@ function createUserObject() {
   };
 }
 
+// Note to self: find a better way to do this
+const createArrayOfFirstNames = (amount) => [...Array(amount)].map(() => createRandomName("firstName"));
+const createArrayOfLastNames = (amount) => [...Array(amount)].map(() => createRandomName("lastName"));
+const createArrayOfMiddleNames = (amount) => [...Array(amount)].map(() => createRandomName("middleName"));
+
+const createArrayOfMobileNumbers = (amount) => [...Array(amount)].map(() => createRandomPhoneNumber("mobile"));
+const createArrayOfHomePhoneNumbers = (amount) => [...Array(amount)].map(() => createRandomPhoneNumber("home"));
+
+const createArrayOfRandomEmails = (amount) =>
+  [...Array(amount)].map(() => createRandomEmail(createRandomName("firstName"), createRandomName("lastName")));
+
+const createArrayOfRandomPostcodes = (amount) => [...Array(amount)].map(() => randomPostcode());
+const createArrayOfRandomStreetNames = (amount) => [...Array(amount)].map(() => randomStreetName());
+const createArrayOfRandomDoorNumbers = (amount) => [...Array(amount)].map(() => randomDoorNumber());
+const createArrayOfRandomCities = (amount) => [...Array(amount)].map(() => randomCity());
+const createArrayOfRandomCounties = (amount) => [...Array(amount)].map(() => randomCounty());
+
+const createArrayOfRandomAddressObject = (amount) => [...Array(amount)].map(() => createAddressObject());
+const createArrayOfRandomUserObject = (amount) => [...Array(amount)].map(() => createUserObject());
+
 module.exports = {
   createRandomName,
   createRandomPhoneNumber,
@@ -118,7 +140,20 @@ module.exports = {
   randomStreetName,
   randomDoorNumber,
   randomCity,
-  randomCountie,
+  randomCounty,
   createAddressObject,
   createUserObject,
+  createArrayOfFirstNames,
+  createArrayOfLastNames,
+  createArrayOfMiddleNames,
+  createArrayOfMobileNumbers,
+  createArrayOfHomePhoneNumbers,
+  createArrayOfRandomEmails,
+  createArrayOfRandomPostcodes,
+  createArrayOfRandomStreetNames,
+  createArrayOfRandomDoorNumbers,
+  createArrayOfRandomCities,
+  createArrayOfRandomCounties,
+  createArrayOfRandomAddressObject,
+  createArrayOfRandomUserObject,
 };
