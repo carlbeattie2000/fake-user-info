@@ -1,0 +1,138 @@
+{
+  "content": {
+    "accountID": "cryptoMD5",
+    "accountInfo": {
+      "nameFirst": "nameFirst",
+      "nameLast": "nameLast",
+      "nameMiddle": "nameMiddle",
+      "phoneMobile": "phoneMobile",
+      "phoneHome": "phoneHome",
+      "accountEmail": "internetEmail"
+    },
+    "accountHomeAddress": {
+      "addressRegisteredOwner": "addressRegisteredOwner",
+      "addressDoorNumber": "addressDoorNumber",
+      "addressStreetName": "addressStreetName",
+      "addressCity": "addressCity",
+      "addressCounty": "addressCounty",
+      "addressPostCode": "addressPostCode"
+    },
+    "privateAccountInformation": {
+      "accountLogOnHistory": "functionArray|10|dateTime|ANSIC",
+      "accountLoggedInFromHistory": "functionArray|10|internetIP4",
+      "accountDeviceConnectionHistory": "functionArray|10|internetUA"
+    },
+    "activeAccounts": [
+      {
+        "accountNumber": "accountNumber",
+        "accountSortCode": "accountSortCode",
+        "accountLoginID": "accountLoginID",
+        "accountOpenDate": "accountOpenDate",
+        "accountPendingBalance": "accountPendingBalance",
+        "accountBalance": "accountBalance",
+        "accountTransactions": [
+          {
+            "transactionID": "transactionID",
+            "transactionDate": "transactionDate",
+            "transactionDescription": "transactionDescription",
+            "transactionSender": "transactionSender",
+            "transactionReceiver": "transactionRReceiver",
+            "transactionOutAmount": "transactionOutAmount",
+            "transactionInAmount": "transactionInAmount",
+            "accountBalance": "accountBalance"
+          }
+        ],
+        "accountFlags": [
+          {
+            "flagID": "flagID",
+            "flagReason": "flagReason",
+            "flagActive": false
+          }
+        ],
+        "accountBlacklisted": false,
+        "accountOpenInvestigations": [
+          {
+            "investigationID": "investigationID",
+            "investigationReason": "investigationReason",
+            "investigatingOfficer": "investigatingOfficer",
+            "investigationLevel": "investigationLevel",
+            "investigationEvidence": [
+              {
+                "evidenceID": "evidenceID",
+                "evidenceNotes": [
+                  {
+                    "noteID": "noteID",
+                    "note": "note"
+                  }
+                ],
+                "evidenceTransactions": [
+                  {
+                    "transaction": "transaction"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "accountInDebt": false,
+        "accountLocked": false,
+        "accountPendingReview": false,
+        "accountFraudReported": false,
+        "accountAttachedCards": [
+          {
+            "CardNumber": "accountCardNumber",
+            "CardSort": "accountCardSort",
+            "CardPin": "cardPin",
+            "ExpiryDate": "accountExpiryDate",
+            "cardBlocked": false,
+            "cardExpired": false
+          }
+        ]
+      }
+    ],
+    "accountActiveLoans": [
+      {
+        "loanID": "loadID",
+        "loadConnectedAccount": "loanConnectedAccount",
+        "loadAmount": "loanAmount",
+        "loadLength": "loanLength",
+        "loanStartDate": "loanStartDate",
+        "loanEndDate": "loanEndDate",
+        "loanMonthlyAmount": "loanMonthlyAmount",
+        "loanOutstanding": "loanOutstanding",
+        "loanPayed": "loanPayed",
+        "loanInDebt": false,
+        "loanPaymentHistory": [
+          {
+            "paymentID": "paymentID",
+            "paymentAmount": "paymentAmount",
+            "paymentDate": "paymentDate",
+            "paymentDueDate": "paymentDueDate",
+            "paymentLate": false,
+            "paymentRollOver": false
+          }
+        ]
+      }
+    ],
+    "accountActiveMortgages": [
+      {
+        "mortgagesID": "mortgagesID",
+        "mortgagesConnectedAccount": "mortgagesConnectedAccount",
+        "mortgagesProperty": "mortgagesProperty",
+        "mortgagesDepositAmount": "mortgagesDepositAmount",
+        "mortgagesMonthlyPayment": "mortgagesMonthlyPayment",
+        "mortgagesOutstandingBalance": "mortgagesOutstandingBalance",
+        "mortgagesPaymentHistory": [
+          {
+            "paymentID": "paymentID",
+            "paymentAmount": "paymentAmount",
+            "paymentDate": "paymentDate",
+            "paymentDueDate": "paymentDueDate",
+            "paymentLate": false,
+            "paymentRollOver": false
+          }
+        ]
+      }
+    ]
+  }
+}
