@@ -9,5 +9,9 @@
     "fake_user_information",
     "fake_user_account_information",
     "json"
-  ]
+  ],
+  "devDependencies": {
+    "csv-parse": "^5.0.4",
+    "eslint": "^8.6.0"
+  }
 }

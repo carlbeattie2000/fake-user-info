@@ -1,3 +1,3 @@
-const dataGenerators = require("./dataGenerators");
+const impostor = require("./src");
 
-module.exports = dataGenerators;
+module.exports = impostor;

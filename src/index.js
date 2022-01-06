@@ -1,4 +1,5 @@
 const user = require("./userInformation/user");
+const address = require("./userInformation/address");
 const privateInfo = require("./sensitiveInformation/internet");
 // Bank Accounts Data
 const bank = require("./bankAccounts/bank");
@@ -12,6 +13,7 @@ const deviceInformation = require("./computer/deviceInformation");
 
 module.exports = {
   user,
+  address,
   privateInfo,
   bank,
   companies,

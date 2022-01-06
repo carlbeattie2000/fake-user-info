@@ -27,13 +27,14 @@ impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
   - personName("firstName" | "middleName" | "lastName")
   - phoneNumber("mobile" | "home")
   - personEmail
+  - createUser
+- address
   - postcode
   - streetName
   - doorNumber
   - city
   - county
-  - createFullAddress
-  - createFullUser
+  - createAddress
 - bank
   - bankName
   - cardNumber
