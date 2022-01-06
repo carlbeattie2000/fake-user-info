@@ -3,17 +3,17 @@
 ## Currently Added & Working Generators
 
 ```
-npm i fake_user_information
+npm i impostor.js
 
 or
 
-yarn add fake_user_information
+yarn add impostor.js
 ```
 
 ## Node.js
 
 ```javascript
-const fake_i = require("fake_user_information");
+const fake_i = require("impostor.js");
 
 dataGenerators.user.personName("firstName"); // Carl Beattie
 dataGenerators.user.personEmail(); // carlbeattie@gmail.com

@@ -1,6 +1,6 @@
 {
-  "name": "fake_user_information",
-  "version": "0.2.2",
+  "name": "impostor.js",
+  "version": "0.2.4",
   "main": "index.js",
   "license": "MIT",
   "author": "Carl Beattie <12beattiecastp@gmail.com>",
