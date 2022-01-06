@@ -1,7 +1,3 @@
-
-
-
-# fake-user-info
 **WORK IN PROGRESS**
 ## Currently Added & Working Generators
 #### The main functions will be listed bellow, and the small sub functions, that can be used on there own, will be listed in another file i will link soon.
