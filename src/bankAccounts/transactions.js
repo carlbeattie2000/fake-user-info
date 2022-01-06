@@ -1,5 +1,6 @@
 const PATH = require("path");
 
+// eslint-disable-next-line no-undef
 const __DATA_PATH = PATH.join(__dirname, "..\\..\\dataSets\\transactions\\");
 
 const globalFunctions = require("../../global");
@@ -59,8 +60,8 @@ function createTransaction(balance = 1400) {
     transactionDate: globalFunctions.randomFullDate(),
     transactionDescription: transactionDescription(),
     transactionSender: sender,
-    transactionOutAmount: outAmount,
-    transactionInAmount: inAmount,
+    transactionOutAmount: outAmountVar,
+    transactionInAmount: inAmountVar,
     accountBalance: balance,
   };
 }

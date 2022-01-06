@@ -70,7 +70,7 @@ function createLoan(connectedAccount) {
     loanID: loanID(),
     loanConnectedAccount: connectedAccount,
     loanAmount: loanAmount,
-    loanLength: loanLength,
+    loanLength: loanLengthVar,
     loanStartDate: globalFunctions.randomFullDate(),
     loanEndDate: globalFunctions.randomFullDate(),
     loanMonthlyAmount: loanMonthlyPayAmount,
