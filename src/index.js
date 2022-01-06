@@ -5,7 +5,7 @@ const internet = require("./sensitiveInformation/internet");
 const bank = require("./bankAccounts/bank");
 
 // company
-const companies = require("./companies/companies");
+const company = require("./companies/companies");
 
 // computers & hardware
 const computersParts = require("./computer/computerParts");
@@ -16,7 +16,7 @@ module.exports = {
   address,
   internet,
   bank,
-  companies,
+  company,
   computersParts,
   deviceInformation,
 };

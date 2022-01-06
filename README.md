@@ -68,11 +68,12 @@ impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
   - httpMethod
   - port
 - company
-  - companyName
-  - companyCatchPhrase
-  - companyAnnualEarnings(optional: max)
-  - companyAnnualProfile(optional: earnings)
-  - companyOperatingCountry(optional: earnings, profit)
+  - name
+  - catchPhrase
+  - annualEarnings(optional: max)
+  - annualProfit(optional: earnings)
+  - annualLoss(optional: earnings, profit)
+  - operatingCountry
 - computersParts
   - computerCase
   - computerMotherboard
