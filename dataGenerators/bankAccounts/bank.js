@@ -1,8 +1,10 @@
 const PATH = require("path");
-
 const globalFunctions = require("../../global");
-
 const __DATA_PATH = PATH.join(__dirname, "..\\..\\dataSets\\banks\\");
+
+const transactions = require("./transactions");
+const flags = require("./accountFlags");
+const loans = require("./loans");
 
 function bankName() {
   const bankNames = globalFunctions.getJSONContentArray("bankNames.json", __DATA_PATH);
@@ -140,4 +142,7 @@ module.exports = {
   arrayAccountBalance,
   arrayCreateCard,
   arrayCreateAccount,
+  transactions,
+  flags,
+  loans,
 };

@@ -46,14 +46,14 @@ dataGenerators.bankAccounts.createMultipleCards(10); // create multiple bank car
   - accountBalance
   - createCard
   - createAccount
-    - transactions
-      - createTransaction
-    - flags
-      - flagID
-      - flagReason
-      - createFlag
-    - loans
-      - createLoan
+  - transactions
+    - createTransaction
+  - flags
+    - flagID
+    - flagReason
+    - createFlag
+  - loans
+    - createLoan
 - internet
   - IPV4
   - IPV6

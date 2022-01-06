@@ -1,10 +1,7 @@
 const user = require("./userInformation/user");
 const privateInfo = require("./sensitiveInformation/internet");
 // Bank Accounts Data
-const bankAccounts = require("./bankAccounts/bank");
-const transactions = require("./bankAccounts/transactions");
-const accountFlags = require("./bankAccounts/accountFlags");
-const loans = require("./bankAccounts/loans");
+const bank = require("./bankAccounts/bank");
 
 // company
 const companies = require("./companies/companies");
@@ -15,10 +12,7 @@ const computersParts = require("./computer/computerParts");
 module.exports = {
   user,
   privateInfo,
-  bankAccounts,
-  transactions,
-  accountFlags,
-  loans,
+  bank,
   companies,
   computersParts,
 };

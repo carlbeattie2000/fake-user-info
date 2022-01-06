@@ -1,5 +1,5 @@
 const dataGenerators = require("./dataGenerators");
 
-dataGenerators.bankAccounts.createMultipleCards(10);
+console.log(dataGenerators.bank);
 
 module.exports = dataGenerators;
