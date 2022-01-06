@@ -1,5 +1,6 @@
 
 
+
 # fake-user-info
 **WORK IN PROGRESS**
 ## Currently Added & Working Generators
@@ -187,8 +188,18 @@ generators.loans.generatePaymentHistoryObjectMain("accountNumber");
 /*
 We have two main functions, one which only takes commands and returns a single whole user object, and then another that takes the amount
 of users you want to generate, then the commands.
+
+There are currently 6 commands:
+	address - adds a random address the the user object, take's no arguments
+	privateInfo=[num] - adds random private user infomation(deviceConnectionDates, ect) and takes one argument, which is the amount of data, you would like to add to each array inside privateInformation
+	bankAccount - adds a bankAccount along with a bankCard to the user object, take's no arguments.
+	addTransaction=[num] - add a given amount of random transactions to the user object.
+	addFlag=[num] - add a given amount of random accountFlags to the user object.
+	loan - takes no arguments and adds a random loan object, to the user object.
 */
 generators.main.createMultipleUsers( 1, "address", "privateInfo=2", "bankAccount", "addTransaction=2","addFlag=1", "loan");
+// or
+generators.main.createSingleUserObject("address", "privateInfo=2", "bankAccount", "addTransaction=2","addFlag=1", "loan");
 {
   accountID: "6E2EC5E4D7207F53827F27F4",
   accountInfo: {
