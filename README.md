@@ -68,6 +68,11 @@ impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
   - protocol
   - httpMethod
   - port
+- criminalHistory
+  - offence
+  - warrant
+  - charge
+  - criminalRecord
 - company
   - name
   - catchPhrase
