@@ -78,3 +78,12 @@ impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
   - computerPowerSupply
   - computerStorage
   - buildPC
+- deviceInformation
+  - macAddress
+  - systemSKU
+  - softwareBuildID
+  - motherboardID
+  - hardDriveID
+  - operatingSystem
+  - lastBIOSUpdate
+  - createDeviceDetails

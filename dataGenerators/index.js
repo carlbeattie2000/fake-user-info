@@ -8,6 +8,7 @@ const companies = require("./companies/companies");
 
 // computers & hardware
 const computersParts = require("./computer/computerParts");
+const deviceInformation = require("./computer/deviceInformation");
 
 module.exports = {
   user,
@@ -15,4 +16,5 @@ module.exports = {
   bank,
   companies,
   computersParts,
+  deviceInformation,
 };
