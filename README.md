@@ -75,14 +75,14 @@ impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
   - annualLoss(optional: earnings, profit)
   - operatingCountry
 - computersParts
-  - computerCase
-  - computerMotherboard
-  - computerRam
-  - computerCPU
-  - computerGPU
-  - computerCPUCooling
-  - computerPowerSupply
-  - computerStorage
+  - casePart
+  - motherboard
+  - ram
+  - CPU
+  - GPU
+  - CPUCooling
+  - powerSupply
+  - storage
   - buildPC
 - deviceInformation
   - macAddress
