@@ -2,5 +2,12 @@
   "name": "fake_user_information",
   "version": "0.1.6",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "author": "Carl Beattie <12beattiecastp@gmail.com>",
+  "keywords": [
+    "nodejs",
+    "fake_user_information",
+    "fake_user_account_information",
+    "json"
+  ]
 }
