@@ -5,8 +5,10 @@
 
 > User Info Functions
 
-    const generators = require("./dataGenerators")
+```javascript
+const generators = require("./dataGenerators")
 
     generators.user.createAddressObject("ownerName")  // Will return a address object with the optional arguent of owner.
     {"addressRegisteredOwner": "","addressDoorNumber": 124,"addressStreetName": "Addle Hill","addressCity": "Plymouth","addressCounty": "Lincolnshire","addressPostCode": "HR1 1NN"}
+```
     
