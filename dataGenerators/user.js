@@ -60,9 +60,7 @@ function createRandomEmail(first_name, last_name) {
   return first_name + last_name + "@" + domains[randomMinMax(0, domains.length)];
 }
 
-// This takes a little too long to complete due to the large data set
 function randomPostcode() {
-  // let postcode = getJSONContentArray("postCodes.json"); it was too slow way tooo slow was taking 1.3 mins to load 200 items, now takes 2-4 seconds with smaller data set
   let postcode = [
     "AB1 0AA",
     "AB1 0AB",

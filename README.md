@@ -4,10 +4,14 @@
 
 #### The main functions will be listed bellow, and the small sub functions, that can be used on there own, will be listed in another file i will link soon.
 
+```
+npm i fake_user_information
+```
+
 > User General Information
 
 ```javascript
-const generators = require("./dataGenerators");
+const generators = require("fake_user_information");
 
 generators.user.createAddressObject("ownerName");  // Will return a address object with the optional argument of owner.
 {
