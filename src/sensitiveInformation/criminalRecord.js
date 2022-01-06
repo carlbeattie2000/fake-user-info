@@ -30,6 +30,8 @@ const offences = [
   "Attempted Murder"
 ];
 
+const crimeNumber = () => globalFunctions.genRanHex(3) + globalFunctions.randomMinMax(10000, 99999) + globalFunctions.randomMinMax(10, 99) + globalFunctions.randomMinMax(1000,9999) + globalFunctions.genRanHex(2);
+
 const offence = () => {
   return offences[globalFunctions.randomMinMax(0, offences.length -1)];
 };
@@ -46,6 +48,7 @@ const charge = () => {
   return {
     chargeDate: globalFunctions.randomFullDate(),
     offence: offence(),
+    offenceCrimeNumber: crimeNumber(),
     outcome: globalFunctions.randomMinMax(0, 1) ? "Guilty" : "Not Guilty",
     offenceLocation: address.createAddress()
   };
@@ -68,16 +71,19 @@ const criminalRecord = () => {
   };
 };
 
+const arrayCrimeNumbers = (amount) => [...Array(amount)].map(() => crimeNumber());
 const arrayOffence = (amount) => [...Array(amount)].map(() => offence());
 const arrayWarrant = (amount) => [...Array(amount)].map(() => warrant());
 const arrayCharge = (amount) => [...Array(amount)].map(() => charge());
 const arrayCriminalRecord = (amount) => [...Array(amount)].map(() => criminalRecord());
 
 module.exports = {
+  crimeNumber,
   offence,
   warrant,
   charge,
   criminalRecord,
+  arrayCrimeNumbers,
   arrayOffence,
   arrayWarrant,
   arrayCharge,

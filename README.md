@@ -69,6 +69,7 @@ impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
   - httpMethod
   - port
 - criminalHistory
+  - crimeNumber
   - offence
   - warrant
   - charge
