@@ -1,24 +1,26 @@
 **WORK IN PROGRESS**
 
+# impostor.js
+
 ## Currently Added & Working Generators
 
 ```
-npm i impostor.js
+npm i impostor_js
 
 or
 
-yarn add impostor.js
+yarn add impostor_js
 ```
 
 ## Node.js
 
 ```javascript
-const fake_i = require("impostor.js");
+const impostor = require("impostor_js");
 
-dataGenerators.user.personName("firstName"); // Carl Beattie
-dataGenerators.user.personEmail(); // carlbeattie@gmail.com
-dataGenerators.bankAccounts.createCard(); // random bank card
-dataGenerators.bankAccounts.createMultipleCards(10); // create multiple bank cards
+impostor.user.personName("firstName"); // Carl Beattie
+impostor.user.personEmail(); // carlbeattie@gmail.com
+impostor.bankAccounts.createCard(); // random bank card
+impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
 ```
 
 - user
