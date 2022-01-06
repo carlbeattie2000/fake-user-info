@@ -68,7 +68,7 @@ generators.bankAccounts.createRandomAccountObject();
 // Creates a user bank account object, and also creates a card for the account as you will see below.
 {
   accountNumber: 57573991,
-  accountSortCode": 128541,
+  accountSortCode: 128541,
   accountLoginID: "0E67BFCC036635",
   accountOpenDate: "Tue May 27 2003 01:50:23 GMT+0100 (British Summer Time)",
   accountPendingBalance: 261,
