@@ -1,4 +1,5 @@
 const globalFunctions = require("../../global");
+// add some more stuff like, vat, registered, company director, ect
 
 const PATH = require("path");
 
