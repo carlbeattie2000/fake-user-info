@@ -2,7 +2,9 @@
 
 ## Currently Added & Working Generators
 
-#### The main functions will be listed bellow, and the small sub functions, that can be used on there own, will be listed in another file i will link soon.
+#### Everything can be grabbed on it's own, you can view all the functions provided in the wiki.
+
+<https://github.com/carlbeattie2000/fake-user-info.js/tree/main/wiki>
 
 ```
 npm i fake_user_information
