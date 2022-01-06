@@ -107,7 +107,6 @@ There is a function to create and return an array of transactions.
 They don't really make sense at the minute and i plan to change them, but it's fake data at the end of the day.
 createArrayOfRandomTransactions
 */
-
 generators.transactions.createArrayOfRandomTransactions(1);
 
 [
