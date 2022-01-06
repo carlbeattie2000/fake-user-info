@@ -11,13 +11,13 @@ function personName(type) {
 
   switch (type) {
     case "firstName":
-      names = globalFunctions.getJSONContentArray("firstNames.json");
+      names = globalFunctions.getJSONContentArray("firstNames.json", __DATA_PATH);
       break;
     case "lastName":
-      names = globalFunctions.getJSONContentArray("lastNames.json");
+      names = globalFunctions.getJSONContentArray("lastNames.json", __DATA_PATH);
       break;
     case "middleName":
-      names = globalFunctions.getJSONContentArray("middleNames.json");
+      names = globalFunctions.getJSONContentArray("middleNames.json", __DATA_PATH);
       break;
     default:
       return console.error("Error: No Valid Type Found");
@@ -55,7 +55,7 @@ function postcode() {
 }
 
 function streetName() {
-  let streetName = getJSONContentArray("streetNames.json");
+  let streetName = getJSONContentArray("streetNames.json", __DATA_PATH);
   return streetName[globalFunctions.randomMinMax(0, streetName.length - 1)];
 }
 
@@ -64,12 +64,12 @@ function doorNumber() {
 }
 
 function city() {
-  let city = getJSONContentArray("cities.json");
+  let city = getJSONContentArray("cities.json", __DATA_PATH);
   return city[globalFunctions.randomMinMax(0, city.length - 1)];
 }
 
 function county() {
-  let county = getJSONContentArray("counties.json");
+  let county = getJSONContentArray("counties.json", __DATA_PATH);
   return county[globalFunctions.randomMinMax(0, county.length - 1)];
 }
 
