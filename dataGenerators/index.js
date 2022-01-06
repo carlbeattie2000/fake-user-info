@@ -1,6 +1,5 @@
 const user = require("./userInformation/user");
 const privateInfo = require("./sensitiveInformation/internet");
-const main = require("./userInformation/createUserObject");
 // Bank Accounts Data
 const bankAccounts = require("./bankAccounts/bank");
 const transactions = require("./bankAccounts/transactions");
@@ -20,7 +19,6 @@ module.exports = {
   transactions,
   accountFlags,
   loans,
-  main,
   companies,
   computersParts,
 };

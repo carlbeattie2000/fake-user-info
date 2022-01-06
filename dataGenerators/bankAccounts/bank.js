@@ -64,7 +64,7 @@ function randomAccountBalance(max = 5000) {
   return globalFunctions.randomMinMax(0, max);
 }
 
-function createRandomBankCardObject() {
+function createCard() {
   return {
     cardNumber: randomCardNumber(),
     cardSort: randomCVV(),
@@ -92,7 +92,7 @@ function createRandomAccountObject() {
     accountLocked: false,
     accountPendingReview: false,
     accountFraudReported: false,
-    accountAttachedCards: [createRandomBankCardObject()],
+    accountAttachedCards: [createCard()],
   };
 }
 
@@ -111,7 +111,7 @@ const createArrayOfRandomAccountPendingBalance = (amount) =>
   [...Array(amount)].map(() => randomAccountPendingBalance());
 const createArrayOfRandomAccountBalance = (amount) => [...Array(amount)].map(() => randomAccountBalance());
 
-const createArrayOfRandomBankCardObjects = (amount) => [...Array(amount)].map(() => createRandomBankCardObject());
+const createMultipleCards = (amount) => [...Array(amount)].map(() => createCard());
 const createArrayOfRandomAccountObjects = (amount) => [...Array(amount)].map(() => createRandomAccountObject());
 
 module.exports = {
@@ -126,7 +126,7 @@ module.exports = {
   randomAccountLoginID,
   randomAccountPendingBalance,
   randomAccountBalance,
-  createRandomBankCardObject,
+  createCard,
   createRandomAccountObject,
   createArrayOfRandomBankName,
   createArrayOfRandomCardNumber,
@@ -139,6 +139,6 @@ module.exports = {
   createArrayOfRandomAccountLoginID,
   createArrayOfRandomAccountPendingBalance,
   createArrayOfRandomAccountBalance,
-  createArrayOfRandomBankCardObjects,
+  createMultipleCards,
   createArrayOfRandomAccountObjects,
 };

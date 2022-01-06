@@ -43,7 +43,7 @@ function phoneNumber(type) {
 
 function personEmail(first_name, last_name) {
   // first+lastname@xxx.com
-  let domains = ["gmail.com", "hotmail.co.uk", "live.co.uk", "yahoo.co.uk", "mail.com", "micromail.com"];
+  let domains = ["gmail.com", "hotmail.co.uk", "live.co.uk", "yahoo.co.uk", "mail.com", "europe.com"];
 
   return first_name + last_name + "@" + domains[globalFunctions.randomMinMax(0, domains.length)];
 }
