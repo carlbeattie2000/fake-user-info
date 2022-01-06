@@ -34,6 +34,7 @@ impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
   - doorNumber
   - city
   - county
+  - country
   - createAddress
 - bank
   - bankName
@@ -73,7 +74,6 @@ impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
   - annualEarnings(optional: max)
   - annualProfit(optional: earnings)
   - annualLoss(optional: earnings, profit)
-  - operatingCountry
 - computersParts
   - casePart
   - motherboard

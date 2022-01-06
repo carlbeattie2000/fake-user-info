@@ -1,13 +1,36 @@
-const PATH = require("path");
 const globalFunctions = require("../../global");
-const __DATA_PATH = PATH.join(__dirname, "..\\..\\dataSets\\banks\\");
 
 const transactions = require("./transactions");
 const flags = require("./accountFlags");
 const loans = require("./loans");
 
 function bankName() {
-  const bankNames = globalFunctions.getJSONContentArray("bankNames.json", __DATA_PATH);
+  const bankNames = [
+    "Ulster Bank",
+    "Bank of Ireland",
+    "NatWest",
+    "HBL Bank UK",
+    "Tesco Bank",
+    "Lloyds Bank",
+    "National Bank of Egypt",
+    "Habib Bank Zurich",
+    "United National Bank",
+    "Metro Bank",
+    "HSBC Bank",
+    "Royal Bank of Scotland",
+    "Barclays Bank",
+    "TSB Bank",
+    "Halifax",
+    "Sainsbury's Bank",
+    "Co-operative Bank",
+    "FCE Bank",
+    "Bank of Scotland",
+    "Diamond Bank",
+    "Santander",
+    "Virgin Money",
+    "Clydesdale Bank",
+    "Bank of England"
+  ];
 
   return bankNames[globalFunctions.randomMinMax(0, bankNames.length - 1)];
 }
@@ -15,6 +38,7 @@ function bankName() {
 function cardNumber(type = "") {
   // xxxx-xxxx-xxxx-xxxx && VISA = 4 && Mastercard = 2 || 5
   const cardTypes = ["VISA", "Mastercard"];
+  let firstDigit;
 
   if (type == "") {
     type = cardTypes[globalFunctions.randomMinMax(0, cardTypes.length - 1)];
@@ -24,7 +48,7 @@ function cardNumber(type = "") {
     case "VISA":
       return "4" + globalFunctions.randomMinMax(100000000000000, 999999999999999).toString();
     case "Mastercard":
-      let firstDigit = globalFunctions.randomMinMax(0, 1) ? "2" : "5";
+      firstDigit = globalFunctions.randomMinMax(0, 1) ? "2" : "5";
       return firstDigit + globalFunctions.randomMinMax(100000000000000, 999999999999999).toString();
   }
 }

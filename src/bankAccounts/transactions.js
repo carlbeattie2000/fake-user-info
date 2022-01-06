@@ -1,8 +1,3 @@
-const PATH = require("path");
-
-// eslint-disable-next-line no-undef
-const __DATA_PATH = PATH.join(__dirname, "..\\..\\dataSets\\transactions\\");
-
 const globalFunctions = require("../../global");
 
 function transactionID() {
@@ -11,7 +6,37 @@ function transactionID() {
 
 function transactionDescription() {
   // Eg: the item sold or purchased
-  const items = globalFunctions.getJSONContentArray("items.json", __DATA_PATH);
+  const items = [
+    "Art",
+    "NFT",
+    "Payment For Work Complete",
+    "Pixel Art",
+    "Wall Mounted Clock",
+    "Fabric Wall Art",
+    "TGI Fridays London",
+    "*WELCOME HOME* Doormat",
+    "LV (UK)",
+    "Marks & Spencer's",
+    "ASDA",
+    "Argos",
+    "Morison's",
+    "Tesco",
+    "Bird Hunting LTD",
+    "Pest Control",
+    "London Tube (TFL)",
+    "Bus Fair (TFL)",
+    "Bus Fair (Kent Transport)",
+    "National Rail (London - Dover)",
+    "Disney Land Paris (Family Ticket)",
+    "Netflix",
+    "Disney+",
+    "Youtube Music",
+    "Steam (Gaming Library)",
+    "CryptoCurrency Transfer",
+    "Family & Friends Payment",
+    "Winter Wonderland (HydePark)",
+    "GUCCI (Oxford Street)"
+  ];
 
   return items[globalFunctions.randomMinMax(0, items.length - 1)];
 }
@@ -22,7 +47,20 @@ function transactionSender() {
   if (sender > 115) sender = true;
   else sender = false;
 
-  const SENDERS = globalFunctions.getJSONContentArray("senders.json", __DATA_PATH);
+  const SENDERS = [
+    "John Smith",
+    "Mike Bert",
+    "Angel Brown",
+    "Peter Marcos",
+    "J.P Morgan (Bonus)",
+    "Jimmy & co construction (Wage Slip)",
+    "Mark's scaffolding (Wage Slip)",
+    "Mc donald's (Wage Slip)",
+    "Family & Friends (Bank Transfer)",
+    "ASDA (Refund)",
+    "Tesco (Refund)",
+    "Paul Brown Lawyers (Bonus)"
+  ];
 
   if (sender) {
     return SENDERS[globalFunctions.randomMinMax(0, SENDERS.length - 1)];

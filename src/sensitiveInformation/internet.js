@@ -1,8 +1,6 @@
-const PATH = require("path");
+const userAgentCreation = require("./user-agent");
 
 const globalFunctions = require("../../global");
-
-const __DATA_PATH = PATH.join(__dirname, "..\\..\\dataSets\\userPrivateInfo\\");
 
 function IPV4() {
   return (
@@ -37,11 +35,225 @@ function IPV6() {
 }
 
 function domainName() {
-  let domains = [".com", ".co.uk", ".org", ".io", ".tech", ".uk", ".org", ".eu", ".london", ".me", ".ltd", ".me.uk"];
-  let domainName = globalFunctions.getJSONContentArray("domains.json", __DATA_PATH);
+  let domainsExtensions = [
+    ".com", 
+    ".co.uk", 
+    ".org", 
+    ".io", 
+    ".tech", 
+    ".uk", 
+    ".org", 
+    ".eu", 
+    ".london", 
+    ".me", 
+    ".ltd", 
+    ".me.uk"
+  ];
+  let domains = [
+    "full-page",
+    "integrated",
+    "centrist",
+    "impact",
+    "starship",
+    "passageway",
+    "orthodoxy",
+    "tobacco",
+    "skyline",
+    "governorship",
+    "capable",
+    "failure",
+    "screen",
+    "slog",
+    "scripture",
+    "to-do",
+    "patent",
+    "lander",
+    "camcorder",
+    "neat",
+    "civilian",
+    "priceless",
+    "fishing",
+    "scarcity",
+    "re-enact",
+    "hedge",
+    "puff",
+    "goal",
+    "surface",
+    "liturgy",
+    "forested",
+    "ravages",
+    "vengeance",
+    "historian",
+    "exploit",
+    "distribute",
+    "trace",
+    "virtual",
+    "shorts",
+    "palatable",
+    "renaissance",
+    "close",
+    "say",
+    "estimation",
+    "rational",
+    "twitch",
+    "witchcraft",
+    "abrasive",
+    "buffet",
+    "effective",
+    "balm",
+    "incoming",
+    "totalitarian",
+    "politicization",
+    "cultivar",
+    "contextual",
+    "muscular",
+    "colored",
+    "console",
+    "elite",
+    "twin",
+    "bent",
+    "paraphernalia",
+    "log",
+    "current",
+    "convey",
+    "coffeehouse",
+    "goblet",
+    "vandalism",
+    "retool",
+    "credo",
+    "legion",
+    "fluff",
+    "zebra",
+    "cue",
+    "fulfillment",
+    "flash",
+    "commercial",
+    "critic",
+    "unsuitable",
+    "bracelet",
+    "exclusive",
+    "experiment",
+    "unhappy",
+    "innkeeper",
+    "extramarital",
+    "polish",
+    "marquee",
+    "washed",
+    "vanquished",
+    "immense",
+    "malpractice",
+    "equal",
+    "shaking",
+    "rocky",
+    "disfigure",
+    "warrior",
+    "deli",
+    "engrave",
+    "trekyell",
+    "extreme",
+    "evaluative",
+    "hippie",
+    "compelling",
+    "productive",
+    "current",
+    "copyright",
+    "wheel",
+    "snowfall",
+    "adept",
+    "dedication",
+    "stirring",
+    "blueberry",
+    "fund-raiser",
+    "redefine",
+    "tag",
+    "anathema",
+    "journal",
+    "fellow",
+    "downside",
+    "anomaly",
+    "ever-increasing",
+    "testicle",
+    "disobedience",
+    "genealogy",
+    "self-worth",
+    "whisk",
+    "cloak",
+    "aspect",
+    "ascertain",
+    "fetch",
+    "gutter",
+    "vacationer",
+    "teammate",
+    "planner",
+    "inexperienced",
+    "termite",
+    "head",
+    "usher",
+    "impose",
+    "absentee",
+    "mania",
+    "industrialization",
+    "anglo-american",
+    "run",
+    "veiled",
+    "finale",
+    "improvement",
+    "air-conditioning",
+    "shelter",
+    "paraphrase",
+    "fist",
+    "overarching",
+    "field",
+    "stroller",
+    "soft",
+    "ruddy",
+    "turban",
+    "ominous",
+    "canvas",
+    "pedagogical",
+    "homosexual",
+    "place",
+    "functionality",
+    "surname",
+    "cliche",
+    "lapel",
+    "counsel",
+    "penchant",
+    "spacious",
+    "revert",
+    "devolve",
+    "iron",
+    "combination",
+    "triathlon",
+    "lullaby",
+    "riding",
+    "hijack",
+    "skiing",
+    "tantrum",
+    "adversity",
+    "nag",
+    "freighter",
+    "hyperactive",
+    "yelp",
+    "greenery",
+    "jiggle",
+    "pitch",
+    "centimeter",
+    "maxim",
+    "reggae",
+    "finality",
+    "cohort",
+    "boomer",
+    "discourage",
+    "collaborator",
+    "sacrifice",
+    "proverb",
+    "foray"
+  ];
+
   return (
-    domainName[globalFunctions.randomMinMax(0, domainName.length - 1)] +
-    domains[globalFunctions.randomMinMax(0, domains.length - 1)]
+    domains[globalFunctions.randomMinMax(0, domains.length - 1)] +
+    domainsExtensions[globalFunctions.randomMinMax(0, domainsExtensions.length - 1)]
   );
 }
 
@@ -50,9 +262,7 @@ function URL() {
 }
 
 function userAgent() {
-  let userAgents = globalFunctions.getJSONContentArray("userAgents.json", __DATA_PATH);
-
-  return userAgents[globalFunctions.randomMinMax(0, userAgents.length - 1)];
+  return userAgentCreation.generate();
 }
 
 function password() {
@@ -60,13 +270,30 @@ function password() {
 }
 
 function protocol() {
-  const protocols = ["SSL", "FTP", "TCP", "SMTP", "POP", "HTTP"];
+  const protocols = [
+    "SSL",
+    "FTP",
+    "TCP",
+    "SMTP",
+    "POP",
+    "HTTP"
+  ];
 
   return protocols[globalFunctions.randomMinMax(0, protocols.length - 1)];
 }
 
 function httpMethod() {
-  const methods = ["GET", "POST", "HEAD", "PUT", "DELETE", "CONNECT", "OPTIONS", "TRACE", "PATCH"];
+  const methods = [
+    "GET",
+    "POST",
+    "HEAD",
+    "PUT",
+    "DELETE",
+    "CONNECT",
+    "OPTIONS",
+    "TRACE",
+    "PATCH"
+  ];
 
   return methods[globalFunctions.randomMinMax(0, methods.length - 1)];
 }
@@ -76,14 +303,13 @@ function port() {
 }
 
 const arrayIPV4 = (amount) => [...Array(amount)].map(() => IPV4());
-
 const arrayIPV6 = (amount) => [...Array(amount)].map(() => IPV6());
-
 const arrayDomainName = (amount) => [...Array(amount)].map(() => domainName());
-
 const arrayURL = (amount) => [...Array(amount)].map(() => URL());
-
 const arrayUserAgents = (amount) => [...Array(amount)].map(() => userAgent());
+const arrayPasswords = (amount) => [...Array(amount)].map(() => password());
+const arrayProtocol = (amount) => [...Array(amount)].map(() => protocol());
+const arrayHttpMethod = (amount) => [...Array(amount)].map(() => httpMethod());
 
 function arrayDeviceHistory(arrayLength = 1) {
   return {
@@ -108,4 +334,7 @@ module.exports = {
   arrayURL,
   arrayUserAgents,
   arrayDeviceHistory,
+  arrayPasswords,
+  arrayProtocol,
+  arrayHttpMethod
 };
