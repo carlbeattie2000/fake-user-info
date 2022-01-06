@@ -4,7 +4,7 @@ const globalFunctions = require("../../global");
 
 const __DATA_PATH = PATH.join(__dirname, "..\\..\\dataSets\\userPrivateInfo\\");
 
-function randomIP4() {
+function IPV4() {
   return (
     globalFunctions.randomMinMax(0, 255).toString() +
     "." +
@@ -16,7 +16,7 @@ function randomIP4() {
   );
 }
 
-function randomIP6() {
+function IPV6() {
   return (
     globalFunctions.genRanHex(4) +
     ":" +
@@ -36,7 +36,7 @@ function randomIP6() {
   );
 }
 
-function randomDomainName() {
+function domainName() {
   let domains = [".com", ".co.uk", ".org", ".io", ".tech", ".uk", ".org", ".eu", ".london", ".me", ".ltd", ".me.uk"];
   let domainName = globalFunctions.getJSONContentArray("domains.json", __DATA_PATH);
   return (
@@ -45,43 +45,43 @@ function randomDomainName() {
   );
 }
 
-function randomURL() {
-  return "https://" + randomDomainName();
+function URL() {
+  return "https://" + domainName();
 }
 
-function randomUserAgent() {
+function userAgent() {
   let userAgents = globalFunctions.getJSONContentArray("userAgents.json", __DATA_PATH);
 
   return userAgents[globalFunctions.randomMinMax(0, userAgents.length - 1)];
 }
 
-const createArrayOfIP4 = (amount) => [...Array(amount)].map(() => randomIP4());
+const arrayIPV4 = (amount) => [...Array(amount)].map(() => IPV4());
 
-const createArrayOfIP6 = (amount) => [...Array(amount)].map(() => randomIP6());
+const arrayIPV6 = (amount) => [...Array(amount)].map(() => IPV6());
 
-const createArrayOfDomains = (amount) => [...Array(amount)].map(() => randomDomainName());
+const arrayDomainName = (amount) => [...Array(amount)].map(() => domainName());
 
-const createArrayOfURLS = (amount) => [...Array(amount)].map(() => randomURL());
+const arrayURL = (amount) => [...Array(amount)].map(() => URL());
 
-const createArrayOfUserAgents = (amount) => [...Array(amount)].map(() => randomUserAgent());
+const arrayUserAgents = (amount) => [...Array(amount)].map(() => userAgent());
 
-function createPrivateDataObject(arrayLength = 1) {
+function arrayDeviceHistory(arrayLength = 1) {
   return {
     accountLogOnHistory: globalFunctions.createArrayOfRandomFullDate(arrayLength),
-    accountLoggedInFromHistory: createArrayOfIP4(arrayLength),
-    accountDeviceConnectedHistory: createArrayOfUserAgents(arrayLength),
+    accountLoggedInFromHistory: arrayIPV4(arrayLength),
+    accountDeviceConnectedHistory: arrayUserAgents(arrayLength),
   };
 }
 
 module.exports = {
-  randomIP4,
-  randomIP6,
-  randomDomainName,
-  randomURL,
-  createArrayOfIP4,
-  createArrayOfIP6,
-  createArrayOfDomains,
-  createArrayOfURLS,
-  createArrayOfUserAgents,
-  createPrivateDataObject,
+  IPV4,
+  IPV6,
+  domainName,
+  URL,
+  arrayIPV4,
+  arrayIPV6,
+  arrayDomainName,
+  arrayURL,
+  arrayUserAgents,
+  arrayDeviceHistory,
 };

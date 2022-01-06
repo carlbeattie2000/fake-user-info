@@ -4,13 +4,13 @@ const globalFunctions = require("../../global");
 
 const __DATA_PATH = PATH.join(__dirname, "..\\..\\dataSets\\banks\\");
 
-function randomBankName() {
+function bankName() {
   const bankNames = globalFunctions.getJSONContentArray("bankNames.json", __DATA_PATH);
 
   return bankNames[globalFunctions.randomMinMax(0, bankNames.length - 1)];
 }
 
-function randomCardNumber(type = "") {
+function cardNumber(type = "") {
   // xxxx-xxxx-xxxx-xxxx && VISA = 4 && Mastercard = 2 || 5
   const cardTypes = ["VISA", "Mastercard"];
 
@@ -27,63 +27,63 @@ function randomCardNumber(type = "") {
   }
 }
 
-function randomExpiryDate() {
+function expiryDate() {
   return globalFunctions.randomMinMax(1, 12) + "/" + globalFunctions.randomMinMax(22, 25);
 }
 
-function randomStartDate() {
+function validFromDate() {
   // note to self: i know this is fake data and does not matter, but the fact that the month here can be further ahead of time than present is bothering me and needs to change
   return globalFunctions.randomMinMax(1, 12) + "/" + globalFunctions.randomMinMax(20, 22);
 }
 
-function randomCVV() {
+function CVV() {
   return globalFunctions.randomMinMax(100, 999);
 }
 
-function randomCardPin() {
+function pin() {
   return globalFunctions.randomMinMax(1000, 9999);
 }
 
-function randomSortNumber() {
+function sortNumber() {
   return globalFunctions.randomMinMax(100000, 999999);
 }
 
-function randomAccountNumber() {
+function accountNumber() {
   return globalFunctions.randomMinMax(10000000, 99999999);
 }
 
-function randomAccountLoginID() {
+function accountLoginID() {
   return globalFunctions.genRanHex(10) + globalFunctions.randomMinMax(1000, 9999);
 }
 
-function randomAccountPendingBalance(max = 1000) {
+function pendingBalance(max = 1000) {
   return globalFunctions.randomMinMax(0, max);
 }
 
-function randomAccountBalance(max = 5000) {
+function accountBalance(max = 5000) {
   return globalFunctions.randomMinMax(0, max);
 }
 
 function createCard() {
   return {
-    cardNumber: randomCardNumber(),
-    cardSort: randomCVV(),
-    cardPin: randomCardPin(),
-    expiryDate: randomExpiryDate(),
-    cardValidFrom: randomStartDate(),
+    cardNumber: cardNumber(),
+    cardSort: CVV(),
+    cardPin: pin(),
+    expiryDate: expiryDate(),
+    cardValidFrom: validFromDate(),
     cardBlocked: false,
     cardExpired: false,
   };
 }
 
-function createRandomAccountObject() {
+function createAccount() {
   return {
-    accountNumber: randomAccountNumber(),
-    accountSortCode: randomSortNumber(),
-    accountLoginID: randomAccountLoginID(),
+    accountNumber: accountNumber(),
+    accountSortCode: sortNumber(),
+    accountLoginID: accountLoginID(),
     accountOpenDate: globalFunctions.randomFullDate(),
-    accountPendingBalance: randomAccountPendingBalance(),
-    accountBalance: randomAccountBalance(),
+    accountPendingBalance: pendingBalance(),
+    accountBalance: accountBalance(),
     accountTransactions: [],
     accountFlags: [],
     accountBlacklisted: false,
@@ -96,49 +96,48 @@ function createRandomAccountObject() {
   };
 }
 
-const createArrayOfRandomBankName = (amount) => [...Array(amount)].map(() => randomBankName());
+const arrayBankName = (amount) => [...Array(amount)].map(() => bankName());
 
-const createArrayOfRandomCardNumber = (amount) => [...Array(amount)].map(() => randomCardNumber());
-const createArrayOfRandomExpiryDate = (amount) => [...Array(amount)].map(() => randomExpiryDate());
-const createArrayOfRandomStartDate = (amount) => [...Array(amount)].map(() => randomStartDate());
-const createArrayOfRandomCVV = (amount) => [...Array(amount)].map(() => randomCVV());
+const arrayCardNumber = (amount) => [...Array(amount)].map(() => cardNumber());
+const arrayExpiryDate = (amount) => [...Array(amount)].map(() => expiryDate());
+const arrayValidFromDate = (amount) => [...Array(amount)].map(() => validFromDate());
+const arrayCVV = (amount) => [...Array(amount)].map(() => CVV());
 
-const createArrayOfRandomCardPin = (amount) => [...Array(amount)].map(() => randomCardPin());
-const createArrayOfRandomSortNumber = (amount) => [...Array(amount)].map(() => randomSortNumber());
-const createArrayOfRandomAccountNumber = (amount) => [...Array(amount)].map(() => randomAccountNumber());
-const createArrayOfRandomAccountLoginID = (amount) => [...Array(amount)].map(() => randomAccountLoginID());
-const createArrayOfRandomAccountPendingBalance = (amount) =>
-  [...Array(amount)].map(() => randomAccountPendingBalance());
-const createArrayOfRandomAccountBalance = (amount) => [...Array(amount)].map(() => randomAccountBalance());
+const arrayPin = (amount) => [...Array(amount)].map(() => pin());
+const arraySortNumber = (amount) => [...Array(amount)].map(() => sortNumber());
+const arrayAccountNumber = (amount) => [...Array(amount)].map(() => accountNumber());
+const arrayAccountLoginID = (amount) => [...Array(amount)].map(() => accountLoginID());
+const arrayPendingBalance = (amount) => [...Array(amount)].map(() => pendingBalance());
+const arrayAccountBalance = (amount) => [...Array(amount)].map(() => accountBalance());
 
-const createMultipleCards = (amount) => [...Array(amount)].map(() => createCard());
-const createArrayOfRandomAccountObjects = (amount) => [...Array(amount)].map(() => createRandomAccountObject());
+const arrayCreateCard = (amount) => [...Array(amount)].map(() => createCard());
+const arrayCreateAccount = (amount) => [...Array(amount)].map(() => createAccount());
 
 module.exports = {
-  randomBankName,
-  randomCardNumber,
-  randomExpiryDate,
-  randomStartDate,
-  randomCVV,
-  randomCardPin,
-  randomSortNumber,
-  randomAccountNumber,
-  randomAccountLoginID,
-  randomAccountPendingBalance,
-  randomAccountBalance,
+  bankName,
+  cardNumber,
+  expiryDate,
+  validFromDate,
+  CVV,
+  pin,
+  sortNumber,
+  accountNumber,
+  accountLoginID,
+  pendingBalance,
+  accountBalance,
   createCard,
-  createRandomAccountObject,
-  createArrayOfRandomBankName,
-  createArrayOfRandomCardNumber,
-  createArrayOfRandomExpiryDate,
-  createArrayOfRandomStartDate,
-  createArrayOfRandomCVV,
-  createArrayOfRandomCardPin,
-  createArrayOfRandomSortNumber,
-  createArrayOfRandomAccountNumber,
-  createArrayOfRandomAccountLoginID,
-  createArrayOfRandomAccountPendingBalance,
-  createArrayOfRandomAccountBalance,
-  createMultipleCards,
-  createArrayOfRandomAccountObjects,
+  createAccount,
+  arrayBankName,
+  arrayCardNumber,
+  arrayExpiryDate,
+  arrayValidFromDate,
+  arrayCVV,
+  arrayPin,
+  arraySortNumber,
+  arrayAccountNumber,
+  arrayAccountLoginID,
+  arrayPendingBalance,
+  arrayAccountBalance,
+  arrayCreateCard,
+  arrayCreateAccount,
 };

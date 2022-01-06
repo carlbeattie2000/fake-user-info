@@ -1,10 +1,10 @@
 const globalFunctions = require("../../global");
 
-function randomFlagID() {
+function flagID() {
   return globalFunctions.genRanHex(10);
 }
 
-function randomFlagReason() {
+function flagReason() {
   const reasons = [
     "Account Suspected Of Fraud",
     "Previous Finical Crimes",
@@ -18,19 +18,19 @@ function randomFlagReason() {
   return reasons[globalFunctions.randomMinMax(0, reasons.length - 1)];
 }
 
-function createRandomFlagObject() {
+function createFlag() {
   return {
-    flagID: randomFlagID(),
-    fLagReason: randomFlagReason(),
+    flagID: flagID(),
+    fLagReason: flagReason(),
     flagActive: true,
   };
 }
 
-const createArrayOfRandomFlags = (amount) => [...Array(amount)].map(() => createRandomFlagObject());
+const createArrayOfRandomFlags = (amount) => [...Array(amount)].map(() => createFlag());
 
 module.exports = {
-  randomFlagID,
-  randomFlagReason,
-  createRandomFlagObject,
+  flagID,
+  flagReason,
+  createFlag,
   createArrayOfRandomFlags,
 };

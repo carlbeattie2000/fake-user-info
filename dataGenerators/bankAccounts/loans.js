@@ -1,14 +1,14 @@
 const globalFunctions = require("../../global");
 
-function randomLoanID() {
+function loanID() {
   return globalFunctions.genRanHex(12);
 }
 
-function randomLoanTotalAmount(min = 125000) {
+function loanTotalAmount(min = 125000) {
   return globalFunctions.randomMinMax(min, 3000000);
 }
 
-function randomLoanLength() {
+function loanLength() {
   return globalFunctions.randomMinMax(20, 35);
 }
 
@@ -24,7 +24,7 @@ function loanYearlyPayment(yearsPassed, totalAmountPayed) {
   return Math.floor(totalAmountPayed / yearsPassed);
 }
 
-function randomAmountLoanPayed(totalAmount, yearsPassedSinceLoan, totalYears) {
+function amountLoanPayed(totalAmount, yearsPassedSinceLoan, totalYears) {
   return globalFunctions.randomMinMax(0, totalAmount / (totalYears - yearsPassedSinceLoan));
 }
 
@@ -32,15 +32,15 @@ function loanOutstanding(totalAmount, AmountPayed) {
   return totalAmount - AmountPayed;
 }
 
-const generatePaymentHistory = (yearsPassed, totalPayed) =>
+const paymentHistory = (yearsPassed, totalPayed) =>
   [...Array(yearsPassed)].map(() => loanYearlyPayment(yearsPassed, totalPayed));
 
-function generatePaymentHistoryObjectFinal(connectedAccountNumber = "123543454934dhd", yearsPassed, totalPayed) {
+function paymentHistoryObjectFinal(connectedAccountNumber = "123543454934dhd", yearsPassed, totalPayed) {
   let arr = [];
 
-  generatePaymentHistory(yearsPassed, totalPayed).forEach((month) => {
+  paymentHistory(yearsPassed, totalPayed).forEach((month) => {
     arr.push({
-      paymentID: randomLoanID(),
+      paymentID: loanID(),
       connectedAccount: connectedAccountNumber,
       paymentAmount: month,
       paymentDate: globalFunctions.randomFullDate(),
@@ -53,21 +53,21 @@ function generatePaymentHistoryObjectFinal(connectedAccountNumber = "12354345493
   return arr;
 }
 
-function generatePaymentHistoryObjectMain(connectedAccount) {
-  let loanAmount = randomLoanTotalAmount();
-  let loanLength = randomLoanLength();
-  let yearsPassedSinceLoanStarted = yearsPassedSinceLoan(loanLength);
-  let loanMonthlyPayAmount = loanMonthlyAmount(loanAmount, loanLength);
-  let randomLoanAmountPayed = randomAmountLoanPayed(loanAmount, yearsPassedSinceLoanStarted, loanLength);
+function createLoan(connectedAccount) {
+  let loanAmount = loanTotalAmount();
+  let loanLengthVar = loanLength();
+  let yearsPassedSinceLoanStarted = yearsPassedSinceLoan(loanLengthVar);
+  let loanMonthlyPayAmount = loanMonthlyAmount(loanAmount, loanLengthVar);
+  let randomLoanAmountPayed = amountLoanPayed(loanAmount, yearsPassedSinceLoanStarted, loanLengthVar);
   let loanTotalOutstanding = loanOutstanding(loanAmount, randomLoanAmountPayed);
-  let paymentHistoryArray = generatePaymentHistoryObjectFinal(
+  let paymentHistoryArray = paymentHistoryObjectFinal(
     connectedAccount,
     yearsPassedSinceLoanStarted,
     randomLoanAmountPayed
   );
 
   return {
-    loanID: randomLoanID(),
+    loanID: loanID(),
     loanConnectedAccount: connectedAccount,
     loanAmount: loanAmount,
     loanLength: loanLength,
@@ -82,5 +82,5 @@ function generatePaymentHistoryObjectMain(connectedAccount) {
 }
 
 module.exports = {
-  generatePaymentHistoryObjectMain,
+  createLoan,
 };
