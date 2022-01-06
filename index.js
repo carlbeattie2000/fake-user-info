@@ -2,9 +2,7 @@ const express = require("express");
 const fs = require("fs");
 const app = require("express")();
 
-const user = require("./dataGenerators/user");
-const privateData = require("./dataGenerators/privateData.js");
-const bank = require("./dataGenerators/bank");
+const dataGenerators = require("./dataGenerators");
 
 function getJSONContentArray(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8")).content;
