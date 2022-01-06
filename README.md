@@ -62,6 +62,10 @@ impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
   - domainName
   - URL
   - arrayDeviceHistory
+  - password
+  - protocol
+  - httpMethod
+  - port
 - company
   - companyName
   - companyCatchPhrase

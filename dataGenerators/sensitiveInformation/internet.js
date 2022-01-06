@@ -55,6 +55,26 @@ function userAgent() {
   return userAgents[globalFunctions.randomMinMax(0, userAgents.length - 1)];
 }
 
+function password() {
+  return Math.random().toString(36).slice(2);
+}
+
+function protocol() {
+  const protocols = ["SSL", "FTP", "TCP", "SMTP", "POP", "HTTP"];
+
+  return protocols[globalFunctions.randomMinMax(0, protocols.length - 1)];
+}
+
+function httpMethod() {
+  const methods = ["GET", "POST", "HEAD", "PUT", "DELETE", "CONNECT", "OPTIONS", "TRACE", "PATCH"];
+
+  return methods[globalFunctions.randomMinMax(0, methods.length - 1)];
+}
+
+function port() {
+  return globalFunctions.randomMinMax(0, 49151);
+}
+
 const arrayIPV4 = (amount) => [...Array(amount)].map(() => IPV4());
 
 const arrayIPV6 = (amount) => [...Array(amount)].map(() => IPV6());
@@ -78,6 +98,10 @@ module.exports = {
   IPV6,
   domainName,
   URL,
+  password,
+  protocol,
+  httpMethod,
+  port,
   arrayIPV4,
   arrayIPV6,
   arrayDomainName,
