@@ -28,7 +28,7 @@ function randomFullDate() {
   return date.toString();
 }
 
-const createArrayOfRandomFullDate = (amount) => [...Array(amount)].map(() => randomAccountOpenDate());
+const createArrayOfRandomFullDate = (amount) => [...Array(amount)].map(() => randomFullDate());
 
 module.exports = {
   getJSONContentArray,
