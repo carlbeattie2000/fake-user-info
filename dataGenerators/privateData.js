@@ -65,7 +65,7 @@ const createArrayOfURLS = (amount) => [...Array(amount)].map(() => randomURL());
 
 const createArrayOfUserAgents = (amount) => [...Array(amount)].map(() => randomUserAgent());
 
-function createPrivateDataObject(arrayLength) {
+function createPrivateDataObject(arrayLength = 1) {
   return {
     accountLogOnHistory: globalFunctions.createArrayOfRandomFullDate(arrayLength),
     accountLoggedInFromHistory: createArrayOfIP4(arrayLength),

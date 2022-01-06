@@ -111,8 +111,8 @@ const createArrayOfRandomAccountPendingBalance = (amount) =>
   [...Array(amount)].map(() => randomAccountPendingBalance());
 const createArrayOfRandomAccountBalance = (amount) => [...Array(amount)].map(() => randomAccountBalance());
 
-const createArrayOfRandomBankCardObject = (amount) => [...Array(amount)].map(() => createRandomBankCardObject());
-const createArrayOfRandomAccountObject = (amount) => [...Array(amount)].map(() => createRandomAccountObject());
+const createArrayOfRandomBankCardObjects = (amount) => [...Array(amount)].map(() => createRandomBankCardObject());
+const createArrayOfRandomAccountObjects = (amount) => [...Array(amount)].map(() => createRandomAccountObject());
 
 module.exports = {
   randomBankName,
@@ -139,6 +139,6 @@ module.exports = {
   createArrayOfRandomAccountLoginID,
   createArrayOfRandomAccountPendingBalance,
   createArrayOfRandomAccountBalance,
-  createArrayOfRandomBankCardObject,
-  createArrayOfRandomAccountObject,
+  createArrayOfRandomBankCardObjects,
+  createArrayOfRandomAccountObjects,
 };
