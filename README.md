@@ -1,5 +1,7 @@
 
 
+
+
 # fake-user-info
 **WORK IN PROGRESS**
 ## Currently Added & Working Generators
@@ -54,7 +56,7 @@ generators.privateInfo.createPrivateDataObject(1);
 ```
 > Bank Account Information
 ```javascript
-generators.bankAccounts.createRandomBankCardObject()
+generators.bankAccounts.createRandomBankCardObject();
 // Creates a random bank card object, and takes no arugments.
 {
   "cardNumber": "4915651618533398",
@@ -65,4 +67,58 @@ generators.bankAccounts.createRandomBankCardObject()
   "cardBlocked": false,
   "cardExpired": false
 }
+
+generators.bankAccounts.createRandomAccountObject();
+// Creates a user bank account object, and also creates a card for the account as you will see below.
+{
+  accountNumber: 57573991,
+  accountSortCode": 128541,
+  accountLoginID: "0E67BFCC036635",
+  accountOpenDate: "Tue May 27 2003 01:50:23 GMT+0100 (British Summer Time)",
+  accountPendingBalance: 261,
+  "accountBalance: 2963,
+  accountTransactions: [],
+  accountFlags: [],
+  accountBlacklisted: false,
+  accountOpenInvestigations: [],
+  accountInDebt: false,
+  accountLocked: false,
+  accountPendingReview: false,
+  accountFraudReported: false,
+  accountAttachedCards: [
+    {
+      cardNumber: "2862902715998088",
+      cardSort: 331,
+      cardPin: 5797,
+      expiryDate: "4/24",
+      cardValidFrom: "7/20",
+      cardBlocked: false,
+      cardExpired: false
+    }
+  ]
+}
+// Again there are another two functions to generate multiple of each that return arrays.
+generators.bankAccounts.createArrayOfRandomBankCardObjects();
+generators.bankAccounts.createArrayOfRandomAccountObjects();
+
+/* 
+As you can see above, the bankAccount object has a property accountTransactions. 
+There is a function to create and return an array of transactions. 
+They don't really make sense at the minute and i plan to change them, but it's fake data at the end of the day.
+createArrayOfRandomTransactions
+*/
+
+generators.transactions.createArrayOfRandomTransactions(1);
+
+[
+  {
+  "transactionID": "163256094CE63",
+  "transactionDate": "Sun Oct 04 2015 18:20:16 GMT+0100 (British Summer Time)",
+  "transactionDescription": "Family & Friends Payment",
+  "transactionSender": "self",
+  "transactionOutAmount": 260,
+  "transactionInAmount": 0,
+  "accountBalance": 1140
+  }
+]
 ```
