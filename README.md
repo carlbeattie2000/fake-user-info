@@ -1,3 +1,4 @@
+
 # fake-user-info
 **WORK IN PROGRESS**
 ## Current Added & Working Generators
@@ -6,16 +7,47 @@
 > User Info Functions
 
 ```javascript
-const generators = require("./dataGenerators")
+const generators = require("./dataGenerators");
 
-generators.user.createAddressObject("ownerName")  // Will return a address object with the optional arguent of owner.
+generators.user.createAddressObject("ownerName");  // Will return a address object with the optional arguent of owner.
 {
-    "addressRegisteredOwner": "",
+    "addressRegisteredOwner": "ownerName",
     "addressDoorNumber": 124,
     "addressStreetName": "Addle Hill",
     "addressCity": "Plymouth",
     "addressCounty": "Lincolnshire",
     "addressPostCode": "HR1 1NN"
 }
+
+generators.user.createUserObject(); // Will return a user object with random data
+{
+	"nameFirst": "Giacomo",
+	"nameLast": "Lloyd",
+	"nameMiddle": "Eve",
+	"phoneMobile": "07795764564",
+	"phoneHome": "09251214634",
+	"accountEmail": "GiacomoLloyd@mail.com"
+}
+
+// There are two more function will create an array of the objects in the given range passed.
+generators.user.createArrayOfRandomAddressObject();
+generators.user.createArrayOfRandomUserObject();
+```  
+
+> User Private Info
+```javascript
+generators.privateInfo.createPrivateDataObject(1);
+// This functions returns some random info, on the fake users devices used, date's logged in and IPV4 connections. The function also take one argument, which is the amount of objects you would like to generate and add to the array. 
+  
+{
+	"accountLogOnHistory": [
+		"Sat Dec 25 2021 03:51:55 GMT+0000 (Greenwich Mean Time)"
+	],
+	"accountLoggedInFromHistory": [
+		"121.208.42.62"
+	],
+	"accountDeviceConnectedHistory": [
+		"Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 RuxitSynthetic/1.0 v7000265993717670679 t4157550440124640339"
+	]
+}
 ```
-    
