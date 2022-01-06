@@ -1,25 +1,26 @@
 
+
 # fake-user-info
 **WORK IN PROGRESS**
-## Current Added & Working Generators
+## Currently Added & Working Generators
 #### The main functions will be listed bellow, and the small sub functions, that can be used on there own, will be listed in another file i will link soon.
 
-> User Info Functions
+> User General Information
 
 ```javascript
 const generators = require("./dataGenerators");
 
 generators.user.createAddressObject("ownerName");  // Will return a address object with the optional arguent of owner.
 {
-    "addressRegisteredOwner": "ownerName",
-    "addressDoorNumber": 124,
-    "addressStreetName": "Addle Hill",
-    "addressCity": "Plymouth",
-    "addressCounty": "Lincolnshire",
-    "addressPostCode": "HR1 1NN"
+  "addressRegisteredOwner": "ownerName",
+  "addressDoorNumber": 124,
+  "addressStreetName": "Addle Hill",
+  "addressCity": "Plymouth",
+  "addressCounty": "Lincolnshire",
+  "addressPostCode": "HR1 1NN"
 }
 
-generators.user.createUserObject(); // Will return a user object with random data
+generators.user.createUserObject(); // Will return a user object with random data.
 {
   "nameFirst": "Giacomo",
   "nameLast": "Lloyd",
@@ -34,7 +35,7 @@ generators.user.createArrayOfRandomAddressObject();
 generators.user.createArrayOfRandomUserObject();
 ```  
 
-> User Private Info
+> User Private Information
 ```javascript
 generators.privateInfo.createPrivateDataObject(1);
 // This functions returns some random info, on the fake users devices used, date's logged in and IPV4 connections. The function also take one argument, which is the amount of objects you would like to generate and add to the array. 
@@ -49,5 +50,19 @@ generators.privateInfo.createPrivateDataObject(1);
   "accountDeviceConnectedHistory": [
     "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 RuxitSynthetic/1.0 v7000265993717670679 t4157550440124640339"
   ]
+}
+```
+> Bank Account Information
+```javascript
+generators.bankAccounts.createRandomBankCardObject()
+// Creates a random bank card object, and takes no arugments.
+{
+  "cardNumber": "4915651618533398",
+  "cardSort": 316,
+  "cardPin": 3384,
+  "expiryDate": "3/23",
+  "cardValidFrom": "11/20",
+  "cardBlocked": false,
+  "cardExpired": false
 }
 ```
