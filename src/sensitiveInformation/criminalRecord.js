@@ -1,7 +1,7 @@
 const user = require("../userInformation/user");
 const address = require("../userInformation/address");
 
-const globalFunctions = require("../../global");
+const globalFunctions = require("../global");
 
 const offences = [
   "Abandonment of child under two",

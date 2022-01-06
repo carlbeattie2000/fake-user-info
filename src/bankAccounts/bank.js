@@ -1,4 +1,4 @@
-const globalFunctions = require("../../global");
+const globalFunctions = require("../global");
 
 const transactions = require("./transactions");
 const flags = require("./accountFlags");

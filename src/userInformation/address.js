@@ -7,7 +7,7 @@
     county
     createAddress
 */
-const globalFunctions = require("../../global");
+const globalFunctions = require("../global");
 const postcodeGen = require("../utils/postcode");
 
 

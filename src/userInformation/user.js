@@ -12,7 +12,7 @@ const PATH = require("path");
 // eslint-disable-next-line no-undef
 const __DATA_PATH = PATH.join(__dirname, "..\\..\\dataSets\\userInfo\\");
 
-const globalFunctions = require("../../global");
+const globalFunctions = require("../global");
 
 function personName(type) {
   let names;

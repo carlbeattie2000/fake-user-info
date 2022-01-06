@@ -1,4 +1,4 @@
-const globalFunctions = require("../../global");
+const globalFunctions = require("../global");
 // add some more stuff like, vat, registered, company director, ect
 
 function name() {

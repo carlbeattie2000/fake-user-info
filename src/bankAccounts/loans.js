@@ -1,4 +1,4 @@
-const globalFunctions = require("../../global");
+const globalFunctions = require("../global");
 
 function loanID() {
   return globalFunctions.genRanHex(12);

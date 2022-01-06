@@ -1,4 +1,4 @@
-const globalFunctions = require("../../global");
+const globalFunctions = require("../global");
 
 function flagID() {
   return globalFunctions.genRanHex(10);

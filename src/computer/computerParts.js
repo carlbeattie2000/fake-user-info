@@ -4,7 +4,7 @@ const PATH = require("path");
 // eslint-disable-next-line no-undef
 const __DATA_PATH = PATH.join(__dirname, "..\\..\\dataSets\\computerParts\\");
 
-const globalFunctions = require("../../global");
+const globalFunctions = require("../global");
 
 function casePart() {
   const cases = globalFunctions.getJSONContentArray("cases.json", __DATA_PATH);

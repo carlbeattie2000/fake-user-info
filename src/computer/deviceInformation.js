@@ -1,4 +1,4 @@
-const globalFunctions = require("../../global");
+const globalFunctions = require("../global");
 
 const macAddress = () => [...Array(6)].map(() => globalFunctions.genRanHex(2)).join(":");
 

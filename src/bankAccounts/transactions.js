@@ -1,4 +1,4 @@
-const globalFunctions = require("../../global");
+const globalFunctions = require("../global");
 
 function transactionID() {
   return globalFunctions.randomMinMax(100, 999) + globalFunctions.genRanHex(10);

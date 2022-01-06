@@ -1,6 +1,6 @@
 const userAgentCreation = require("../utils/user-agent");
 
-const globalFunctions = require("../../global");
+const globalFunctions = require("../global");
 
 function IPV4() {
   return (
