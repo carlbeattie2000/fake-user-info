@@ -1,4 +1,4 @@
-const userAgentCreation = require("./user-agent");
+const userAgentCreation = require("../utils/user-agent");
 
 const globalFunctions = require("../../global");
 
