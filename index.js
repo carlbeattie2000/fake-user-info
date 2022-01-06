@@ -4,6 +4,7 @@ const app = require("express")();
 
 const user = require("./dataGenerators/user");
 const privateData = require("./dataGenerators/privateData.js");
+const bank = require("./dataGenerators/bank");
 
 function getJSONContentArray(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8")).content;
@@ -20,5 +21,3 @@ app.listen(3000, () => {
 function sortStringToArray(string) {
   return string.split(" ");
 }
-
-console.log(user.createArrayOfRandomPostcodes(10));

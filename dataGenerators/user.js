@@ -63,7 +63,7 @@ function createRandomEmail(first_name, last_name) {
 // This takes a little too long to complete due to the large data set
 function randomPostcode() {
   let postcode = getJSONContentArray("postCodes.json");
-  console.log("done");
+
   return postcode[randomMinMax(0, postcode.length - 1)];
 }
 
