@@ -1,9 +1,7 @@
-
-
-
-# fake-user-info
 **WORK IN PROGRESS**
+
 ## Currently Added & Working Generators
+
 #### The main functions will be listed bellow, and the small sub functions, that can be used on there own, will be listed in another file i will link soon.
 
 > User General Information
@@ -34,13 +32,14 @@ generators.user.createUserObject(); // Will return a user object with random dat
 // There are two more function will create an array of the objects in the given range passed.
 generators.user.createArrayOfRandomAddressObject();
 generators.user.createArrayOfRandomUserObject();
-```  
+```
 
 > User Private Information
+
 ```javascript
 generators.privateInfo.createPrivateDataObject(1);
-// This functions returns some random info, on the fake users devices used, date's logged in and IPV4 connections. The function also take one argument, which is the amount of objects you would like to generate and add to the array. 
-  
+// This functions returns some random info, on the fake users devices used, date's logged in and IPV4 connections. The function also take one argument, which is the amount of objects you would like to generate and add to the array.
+
 {
   accountLogOnHistory: [
     "Sat Dec 25 2021 03:51:55 GMT+0000 (Greenwich Mean Time)"
@@ -53,7 +52,9 @@ generators.privateInfo.createPrivateDataObject(1);
   ]
 }
 ```
+
 > Bank Account Information
+
 ```javascript
 generators.bankAccounts.createRandomBankCardObject();
 // Creates a random bank card object, and takes no arugments.
@@ -100,9 +101,9 @@ generators.bankAccounts.createRandomAccountObject();
 generators.bankAccounts.createArrayOfRandomBankCardObjects();
 generators.bankAccounts.createArrayOfRandomAccountObjects();
 
-/* 
-As you can see above, the bankAccount object has a property accountTransactions. 
-There is a function to create and return an array of transactions. 
+/*
+As you can see above, the bankAccount object has a property accountTransactions.
+There is a function to create and return an array of transactions.
 They don't really make sense at the minute and i plan to change them, but it's fake data at the end of the day.
 createArrayOfRandomTransactions
 */
@@ -120,8 +121,8 @@ generators.transactions.createArrayOfRandomTransactions(1);
   }
 ]
 
-/* 
-There is another property named accountFlags, we also have a function to 
+/*
+There is another property named accountFlags, we also have a function to
 generate data if you would like to add some random account flags.
 */
 // Create a single flag object
@@ -184,6 +185,7 @@ generators.loans.generatePaymentHistoryObjectMain("accountNumber");
 ```
 
 > Main User Object Creation Function
+
 ```javascript
 /*
 We have two main functions, one which only takes commands and returns a single whole user object, and then another that takes the amount
