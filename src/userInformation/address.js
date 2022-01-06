@@ -6,18 +6,18 @@
     city
     county
     createAddress
+
+    / SOON TM /
+    too add -
+      time zones
+      latitude
+      longitude
+      direction
+      nearbyGPSCoordinates
+
 */
 const globalFunctions = require("../global");
 const postcodeGen = require("../utils/postcode");
-
-
-// valid postcode formats
-// AA9A AA
-// A9A 9AA
-// A9 9AA
-// A99 9AA
-// AA9 9AA
-// AA99 9AA
 
 function postcode() {
   return postcodeGen.rndPostcode();
