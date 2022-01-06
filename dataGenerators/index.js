@@ -10,6 +10,9 @@ const loans = require("./bankAccounts/loans");
 // company
 const companies = require("./companies/companies");
 
+// computers & hardware
+const computersParts = require("./computer/computerParts");
+
 module.exports = {
   user,
   privateInfo,
@@ -19,4 +22,5 @@ module.exports = {
   loans,
   main,
   companies,
+  computersParts,
 };
