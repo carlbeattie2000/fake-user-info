@@ -42,8 +42,8 @@ generators.user.createArrayOfRandomDoorNumbers(); // takes one argument, the amo
 generators.user.createArrayOfRandomCities(); // takes one argument, the amount of items you want it to add to the array, does the same as it's counterpart above, just multiple times with ease.
 
 generators.user.createArrayOfRandomCounties(); // takes one argument, the amount of items you want it to add to the array, does the same as it's counterpart above, just multiple times with ease.
-
-generators.user.createArrayOfRandomAddressObject(); // takes one argument, the amount of items you want it to add to the array, does the same as it's counterpart on the main readme.
-
-generators.user.createArrayOfRandomUserObject(); // takes one argument, the amount of items you want it to add to the array, does the same as it's counterpart on the main readme.
 ```
+
+## Contact me : 12beattiecastp@gmail.com
+
+## if you have any idea of what kind of data sets, I could add to randomly generate.
