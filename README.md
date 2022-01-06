@@ -1,3 +1,4 @@
+
 # fake-user-info
 **WORK IN PROGRESS**
 ## Currently Added & Working Generators
@@ -93,7 +94,7 @@ generators.bankAccounts.createRandomAccountObject();
     }
   ]
 }
-// Again there are another two functions to generate multiple of each that return arrays.
+// Again there are two other functions to generate multiple's of each object that return in an array.
 generators.bankAccounts.createArrayOfRandomBankCardObjects();
 generators.bankAccounts.createArrayOfRandomAccountObjects();
 
