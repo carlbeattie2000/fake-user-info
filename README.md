@@ -116,4 +116,19 @@ generators.transactions.createArrayOfRandomTransactions(1);
   accountBalance: 1140
   }
 ]
+
+/* 
+There is another property named accountFlags, we also have a function to 
+generate data if you would like to add some random account flags.
+*/
+// Create a single flag object
+generators.accountFlags.createRandomFlagObject();
+{
+  flagID: "67FA458D8B",
+  fLagReason: "Suspicious Transactions",
+  flagActive: true
+}
+
+// Create multiple with the maximum range passed
+generators.accountFlags.createArrayOfRandomFlags(10);
 ```
