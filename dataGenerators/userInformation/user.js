@@ -4,7 +4,7 @@ const crypto = require("crypto");
 const fs = require("fs");
 const PATH = require("path");
 
-const __DATA_PATH = PATH.join(__dirname, "..\\dataSets\\userInfo\\");
+const __DATA_PATH = PATH.join(__dirname, "..\\..\\dataSets\\userInfo\\");
 
 function randomMinMax(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);

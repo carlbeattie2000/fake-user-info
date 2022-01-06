@@ -1,8 +1,8 @@
 const PATH = require("path");
 
-const __DATA_PATH = PATH.join(__dirname, "..\\dataSets\\transactions\\");
+const __DATA_PATH = PATH.join(__dirname, "..\\..\\dataSets\\transactions\\");
 
-const globalFunctions = require("../global");
+const globalFunctions = require("../../global");
 
 function randomTransactionID() {
   return globalFunctions.randomMinMax(100, 999) + globalFunctions.genRanHex(10);

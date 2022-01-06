@@ -1,8 +1,8 @@
 const PATH = require("path");
 
-const globalFunctions = require("../global");
+const globalFunctions = require("../../global");
 
-const __DATA_PATH = PATH.join(__dirname, "..\\dataSets\\userPrivateInfo\\");
+const __DATA_PATH = PATH.join(__dirname, "..\\..\\dataSets\\userPrivateInfo\\");
 
 function randomIP4() {
   return (

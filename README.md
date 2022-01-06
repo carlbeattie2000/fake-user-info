@@ -8,6 +8,10 @@
 
 ```
 npm i fake_user_information
+
+or
+
+yarn add fake_user_information
 ```
 
 > User General Information

@@ -1,8 +1,8 @@
 const PATH = require("path");
 
-const globalFunctions = require("../global");
+const globalFunctions = require("../../global");
 
-const __DATA_PATH = PATH.join(__dirname, "..\\dataSets\\banks\\");
+const __DATA_PATH = PATH.join(__dirname, "..\\..\\dataSets\\banks\\");
 
 function randomBankName() {
   const bankNames = globalFunctions.getJSONContentArray("bankNames.json", __DATA_PATH);
