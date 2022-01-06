@@ -132,4 +132,51 @@ generators.accountFlags.createRandomFlagObject();
 
 // Create multiple with the maximum range passed
 generators.accountFlags.createArrayOfRandomFlags(10);
+
+/*
+Another function we have, can generate a random loan taken out, with the option to pass the accountNumber as an argument,
+this object is pretty large.
+*/
+generators.loans.generatePaymentHistoryObjectMain("accountNumber");
+{
+  loanID: "F5C58E20B234",
+  loanConnectedAccount: "accountNumber",
+  loanAmount: 141825,
+  loanLength: 21,
+  loanStartDate: "Fri Sep 30 2005 21:41:27 GMT+0100 (British Summer Time)",
+  loanEndDate: "Sat Mar 23 2019 19:11:07 GMT+0000 (Greenwich Mean Time)",
+  loanMonthlyAmount: 562,
+  loanOutstanding: 138289,
+  loanPayed: 3536,
+  loadInDebt: false,
+  loanPaymentHistory: [
+    {
+      paymentID: "8CC3440773F2",
+      connectedAccount: "accountNumber",
+      paymentAmount: 1178,
+      paymentDate: "Mon Aug 13 2018 04:55:36 GMT+0100 (British Summer Time)",
+      paymentDueDate: "Thu Nov 13 1997 21:26:41 GMT+0000 (Greenwich Mean Time)",
+      paymentLate: false,
+      paymentRollOver: false
+    },
+    {
+      paymentID: "2AC43A153B4A",
+      connectedAccount: "accountNumber",
+      paymentAmount: 1178,
+      paymentDate: "Fri Aug 19 2005 03:13:03 GMT+0100 (British Summer Time)",
+      paymentDueDate: "Thu Oct 15 2015 07:45:58 GMT+0100 (British Summer Time)",
+      paymentLate: false,
+      paymentRollOver: false
+    },
+    {
+      paymentID: "B4E8B80DC79C",
+      connectedAccount: "accountNumber",
+      paymentAmount: 1178,
+      paymentDate: "Fri Jun 16 2017 01:38:29 GMT+0100 (British Summer Time)",
+      paymentDueDate: "Fri Nov 24 2006 07:08:12 GMT+0000 (Greenwich Mean Time)",
+      paymentLate: false,
+      paymentRollOver: false
+    }
+  ]
+}
 ```
