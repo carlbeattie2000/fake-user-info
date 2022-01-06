@@ -9,7 +9,7 @@
 ```javascript
 const generators = require("./dataGenerators");
 
-generators.user.createAddressObject("ownerName");  // Will return a address object with the optional arguent of owner.
+generators.user.createAddressObject("ownerName");  // Will return a address object with the optional argument of owner.
 {
   addressRegisteredOwner: "ownerName",
   addressDoorNumber: 124,
@@ -57,7 +57,7 @@ generators.privateInfo.createPrivateDataObject(1);
 
 ```javascript
 generators.bankAccounts.createRandomBankCardObject();
-// Creates a random bank card object, and takes no arugments.
+// Creates a random bank card object, and takes no arguments.
 {
   cardNumber: "4915651618533398",
   cardSort: 316,
@@ -193,7 +193,7 @@ of users you want to generate, then the commands.
 
 There are currently 6 commands:
 	address - adds a random address the the user object, take's no arguments
-	privateInfo=[num] - adds random private user infomation(deviceConnectionDates, ect) and takes one argument, which is the amount of data, you would like to add to each array inside privateInformation
+	privateInfo=[num] - adds random private user information(deviceConnectionDates, ect) and takes one argument, which is the amount of data, you would like to add to each array inside privateInformation
 	bankAccount - adds a bankAccount along with a bankCard to the user object, take's no arguments.
 	addTransaction=[num] - add a given amount of random transactions to the user object.
 	addFlag=[num] - add a given amount of random accountFlags to the user object.
