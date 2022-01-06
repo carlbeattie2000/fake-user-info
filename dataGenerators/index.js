@@ -5,7 +5,7 @@ const transactions = require("./transactions");
 const accountFlags = require("./accountFlags");
 const loans = require("./loans");
 
-console.log([user, privateInfo, bankAccounts, transactions, accountFlags, loans]);
+const main = require("./createUserObject");
 
 module.exports = {
   user,
@@ -14,4 +14,5 @@ module.exports = {
   transactions,
   accountFlags,
   loans,
+  main,
 };

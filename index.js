@@ -9,7 +9,17 @@ function getJSONContentArray(filePath) {
 }
 
 app.get("/", (req, res) => {
-  res.json(getJSONContentArray("./dataSets/accountTemplate.json"));
+  res.json(
+    dataGenerators.main.createMultipleUsers(
+      200,
+      "address",
+      "privateInfo=2",
+      "bankAccount",
+      "addTransaction=2",
+      "addFlag=1",
+      "loan"
+    )
+  );
 });
 
 app.listen(3000, () => {
