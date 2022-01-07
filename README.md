@@ -1,6 +1,7 @@
 **WORK IN PROGRESS**
 
 # impostor.js
+### Address & phone etc is based on the UK format currently.
 
 ## Currently Added & Working Generators
 
