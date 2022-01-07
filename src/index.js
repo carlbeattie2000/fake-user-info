@@ -4,6 +4,8 @@ const internet = require("./sensitiveInformation/internet");
 const criminalHistory = require("./sensitiveInformation/criminalRecord");
 // Bank Accounts Data
 const bank = require("./bankAccounts/bank");
+// Crypto
+const crypto = require("./crypto/crypto");
 
 // company
 const company = require("./companies/companies");
@@ -18,6 +20,7 @@ module.exports = {
   internet,
   criminalHistory,
   bank,
+  crypto,
   company,
   computersParts,
   deviceInformation,

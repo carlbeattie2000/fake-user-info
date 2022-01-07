@@ -1,4 +1,5 @@
 const fs = require("fs");
+const crypto = require("crypto");
 
 function getJSONContentArray(filePath, dirPath) {
   return JSON.parse(fs.readFileSync(dirPath + filePath, "utf8")).content;
@@ -11,7 +12,7 @@ const genRanHex = (size) =>
     .toUpperCase();
 
 function randomMinMax(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+  return crypto.randomInt(min, max);
 }
 
 function randomFullDate() {
@@ -29,10 +30,13 @@ function randomFullDate() {
 
 const createArrayOfRandomFullDate = (amount) => [...Array(amount)].map(() => randomFullDate());
 
+const randomArrayElement = (array) => array[randomMinMax(0, array.length - 1)];
+
 module.exports = {
   getJSONContentArray,
   genRanHex,
   randomMinMax,
   randomFullDate,
   createArrayOfRandomFullDate,
+  randomArrayElement
 };
