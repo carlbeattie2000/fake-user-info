@@ -58,6 +58,13 @@ impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
     - createFlag
   - loans
     - createLoan
+- crypto
+  - ethereumAddress
+  - bitcoinAddress
+  - bitcoinPrivateKey
+  - coin
+  - coinName
+  - coinPrefix
 - internet
   - IPV4
   - IPV6
