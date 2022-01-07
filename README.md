@@ -37,6 +37,8 @@ impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
   - county
   - country
   - createAddress
+- landmarks
+  - landmark
 - bank
   - bankName
   - cardNumber

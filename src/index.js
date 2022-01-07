@@ -2,6 +2,7 @@ const user = require("./userInformation/user");
 const address = require("./userInformation/address");
 const internet = require("./sensitiveInformation/internet");
 const criminalHistory = require("./sensitiveInformation/criminalRecord");
+const landmarks = require("./userInformation/landmarks");
 // Bank Accounts Data
 const bank = require("./bankAccounts/bank");
 // Crypto
@@ -19,6 +20,7 @@ module.exports = {
   address,
   internet,
   criminalHistory,
+  landmarks,
   bank,
   crypto,
   company,

@@ -128,6 +128,4 @@ exports.rndPostcode = function rndPostcode() {
   const rndLetter = () => chars[rnd(0, chars.length - 1)];
 
   return postcodeAreas[rnd(0, postcodeAreas.length - 1)] + rnd(1, 9) + rnd(1,9) + " " + rnd(1, 9) + rndLetter() + rndLetter();
-
-  
 };
