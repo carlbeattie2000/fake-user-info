@@ -109,11 +109,6 @@ impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
   - createDeviceDetails
 
 # TODO's
-- more user infomation
-  - profession
-  - prefession position (CEO/ CTO / MANAGER)
-  - salary
-  - prefession industry
 - movies&music
   - genre
   - randomActor
