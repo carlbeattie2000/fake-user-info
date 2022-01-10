@@ -1,10 +1,8 @@
 # **Generate small to large amount of fake, random data with nodejs**
 
-## impostor.js
+## Address & phone etc is based on the UK format currently.
 
-### Address & phone etc is based on the UK format currently.
-
-## Currently Added & Working Generators
+### Currently Added & Working Generators
 
 ```bash
 npm i impostor_js
