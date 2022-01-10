@@ -43,6 +43,11 @@ impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
   - createAddress
 - landmarks
   - landmark
+- entertainment
+  - movieGenre
+  - musicGenre
+  - artist
+  - performer
 - bank
   - bankName
   - cardNumber
@@ -108,11 +113,8 @@ impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
   - lastBIOSUpdate
   - createDeviceDetails
 
-# TODO's
-- movies&music
-  - genre
-  - randomActor
-  - randomArtist
+## TODO's
+
 - vehicles
   - make
   - model
