@@ -17,8 +17,8 @@ yarn add impostor_js
 ```javascript
 const impostor = require("impostor_js");
 
-impostor.user.personName("firstName"); // Carl Beattie
-impostor.user.personEmail(); // carlbeattie@gmail.com
+impostor.user.personName(); // Carl
+impostor.user.personEmail(optional: "name1", optional: "name2"); // carlbeattie@gmail.com
 impostor.bankAccounts.createCard(); // random bank card
 impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
 ```
