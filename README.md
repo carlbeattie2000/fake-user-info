@@ -1,4 +1,4 @@
-# Generate small to large amount of fake, random data with nodejs**
+## **Generate small to large amount of fake, random data with nodejs**
 
 # impostor.js
 ### Address & phone etc is based on the UK format currently.
