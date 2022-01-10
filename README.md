@@ -1,11 +1,12 @@
-### **Generate small to large amount of fake, random data with nodejs**
+# **Generate small to large amount of fake, random data with nodejs**
 
-# impostor.js
+## impostor.js
+
 ### Address & phone etc is based on the UK format currently.
 
 ## Currently Added & Working Generators
 
-```
+```bash
 npm i impostor_js
 
 or
@@ -28,6 +29,9 @@ impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
   - personName("firstName" | "middleName" | "lastName")
   - phoneNumber("mobile" | "home")
   - personEmail
+  - jobName
+  - jobPosition
+  - jobIndustry
   - createUser
 - address
   - postcode

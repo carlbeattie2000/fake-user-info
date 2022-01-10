@@ -2921,11 +2921,12 @@ const createUser = () => {
 
 // Note to self: find a better way to do this
 const arrayOfNames = (amount, type) => [...Array(amount)].map(() => personName(type));
-
 const arrayOfPhoneNumbers = (amount, type) => [...Array(amount)].map(() => phoneNumber(type));
-
 const arrayOfEmails = (amount) =>
   [...Array(amount)].map(() => personEmail(personName("firstName"), personName("lastName")));
+const arrayOfJobNames = (amount) => [...Array(amount)].map(() => jobName());
+const arrayOfJobPositions = (amount) => [...Array(amount)].map(() => jobPosition());
+const arrayOfjobIndustries = (amount) => [...Array(amount)].map(() => jobIndustry());
 
 const arrayOfUserObjects = (amount) => [...Array(amount)].map(() => createUser());
 
@@ -2940,5 +2941,8 @@ module.exports = {
   arrayOfNames,
   arrayOfPhoneNumbers,
   arrayOfEmails,
+  arrayOfJobNames,
+  arrayOfJobPositions,
+  arrayOfjobIndustries,
   arrayOfUserObjects,
 };
