@@ -103,3 +103,25 @@ impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
   - operatingSystem
   - lastBIOSUpdate
   - createDeviceDetails
+
+# TODO's
+- more user infomation
+  - profession
+  - prefession position (CEO/ CTO / MANAGER)
+  - salary
+  - prefession industry
+- movies&music
+  - genre
+  - randomActor
+  - randomArtist
+- vehicles
+  - make
+  - model
+  - engine size
+  - year registered
+  - colour
+  - doors
+  - plate
+  - fuel type
+  - type of car
+  - vim
