@@ -2753,10 +2753,10 @@ const personName = () => {
     "Zubair",
     "Zubayr",
     "Zuriel"
-  ]
+  ];
 
   return globalFunctions.randomArrayElement(names);
-}
+};
 
 const phoneNumber = (type) => {
   // mobile | home
@@ -2771,7 +2771,7 @@ const phoneNumber = (type) => {
     default:
       return console.error("Error: No Valid Type Found");
   }
-}
+};
 
 const personEmail = (first_name=personName(), last_name=personName()) => {
   // first+lastname@xxx.com
@@ -2785,7 +2785,10 @@ const personEmail = (first_name=personName(), last_name=personName()) => {
   ];
 
   return first_name + last_name + "@" + domains[globalFunctions.randomMinMax(0, domains.length)];
-}
+};
+
+// mm/dd/yy
+const dob = (maxYearBorn=2003) => [globalFunctions.randomMinMax(1, 31), globalFunctions.randomMinMax(1, 12), globalFunctions.randomMinMax(1945, maxYearBorn)].join("/");
 
 const jobName = () => {
   const jobs = [
@@ -2839,7 +2842,7 @@ const jobName = () => {
   ];
 
   return globalFunctions.randomArrayElement(jobs);
-}
+};
 
 const jobPosition = () => {
   const positions = [
@@ -2867,7 +2870,7 @@ const jobPosition = () => {
   ];
 
   return globalFunctions.randomArrayElement(positions);
-}
+};
 
 const jobIndustry = () => {
   const industries = [
@@ -2903,7 +2906,7 @@ const jobIndustry = () => {
   ];
 
   return globalFunctions.randomArrayElement(industries);
-}
+};
 
 const createUser = () => {
   // first name, last name, middle name, mobile number, home number, email //TEMPLATE\\
@@ -2917,7 +2920,7 @@ const createUser = () => {
     phoneHome: phoneNumber("home"),
     accountEmail: personEmail(namef, namel),
   };
-}
+};
 
 // Note to self: find a better way to do this
 const arrayOfNames = (amount, type) => [...Array(amount)].map(() => personName(type));
@@ -2934,6 +2937,7 @@ module.exports = {
   personName,
   phoneNumber,
   personEmail,
+  dob,
   jobName,
   jobPosition,
   jobIndustry,

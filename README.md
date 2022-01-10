@@ -26,7 +26,8 @@ impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
 - user
   - personName("firstName" | "middleName" | "lastName")
   - phoneNumber("mobile" | "home")
-  - personEmail
+  - personEmail(optional: "name1", optional: "name2")
+  - dob(optional: maxYearBorn)
   - jobName
   - jobPosition
   - jobIndustry
