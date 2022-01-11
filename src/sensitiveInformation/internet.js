@@ -324,6 +324,7 @@ module.exports = {
   IPV6,
   domainName,
   URL,
+  userAgent,
   password,
   protocol,
   httpMethod,
