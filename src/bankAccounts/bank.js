@@ -1,4 +1,5 @@
 const globalFunctions = require("../global");
+const cardNumberGen = require("../utils/card_number");
 
 const transactions = require("./transactions");
 const flags = require("./accountFlags");
@@ -46,10 +47,10 @@ function cardNumber(type = "") {
 
   switch (type) {
     case "VISA":
-      return "4" + globalFunctions.randomMinMax(100000000000000, 999999999999999).toString();
+      return "4" + cardNumberGen();
     case "Mastercard":
       firstDigit = globalFunctions.randomMinMax(0, 1) ? "2" : "5";
-      return firstDigit + globalFunctions.randomMinMax(100000000000000, 999999999999999).toString();
+      return firstDigit + cardNumberGen();
   }
 }
 
