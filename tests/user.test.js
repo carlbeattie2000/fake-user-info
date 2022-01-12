@@ -18,7 +18,7 @@ test("get a random email", () => {
 });
 
 test("get a random date of birth", () => {
-  expect(user.dob()).toMatch(/[1-9]*\/[1-9]*\/[1-9]*/ig);
+  expect(user.dob()).toMatch(/\d*\/\d*\/\d*/ig);
 });
 
 test("get random job name", () => {

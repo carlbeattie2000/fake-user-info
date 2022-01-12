@@ -1,9 +1,13 @@
 {
   "name": "impostor_js",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "main": "index.js",
   "license": "MIT",
   "author": "Carl Beattie <12beattiecastp@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carlbeattie2000/impostor.js"
+  },
   "scripts": {
     "test": "jest"
   },
