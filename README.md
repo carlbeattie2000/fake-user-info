@@ -111,6 +111,10 @@ impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
   - operatingSystem
   - lastBIOSUpdate
   - createDeviceDetails
+- timeZone
+  - random
+  - randomDateTimeString
+  - randomList
 
 ## TODO's
 
