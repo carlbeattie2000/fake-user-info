@@ -3,6 +3,7 @@ const address = require("./userInformation/address");
 const internet = require("./sensitiveInformation/internet");
 const landmarks = require("./userInformation/landmarks");
 const entertainment = require("./userInformation/entertainment");
+const timeZone = require("./userInformation/timezone");
 // Bank Accounts Data
 const bank = require("./bankAccounts/bank");
 // Crypto
@@ -21,6 +22,7 @@ module.exports = {
   internet,
   landmarks,
   entertainment,
+  timeZone,
   bank,
   crypto,
   company,
