@@ -1,6 +1,7 @@
+const ImpostorBase = require("../core/impostorBase");
 const en_GB = require("./en_GB");
 
-class LocalesDefinition {
+class LocalesDefinition extends ImpostorBase {
   constructor() {
     this.locales = {}
   }
@@ -10,6 +11,12 @@ class LocalesDefinition {
   }
 
   getLocale(tag) {
+    if (tag == "random") {
+      const keys = Object.keys(this.locales);
+
+      return this.locales[this.randomArrayElement(keys)];
+    }
+
     if (!this.locales.hasOwnProperty(tag)) {
       return console.log("Country tag does not exist, or support has not been added.")
     }
