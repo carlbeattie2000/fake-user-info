@@ -3,9 +3,12 @@ const ImpostorBase = require("../../core/impostorBase");
 const location = require("./location");
 const phone = require("./phone");
 const internet = require("./internet");
+const vehicle = require("./vehicles");
 
 class Location extends ImpostorBase {
-  constructor() { super() }
+  constructor() {
+    super();
+  }
 
   city() {
     return this.randomArrayElement(location.cities);
@@ -27,7 +30,7 @@ class Location extends ImpostorBase {
     return location.states[this.stateShorthand()];
   }
 
-  zip(state=undefined) {
+  zip(state = undefined) {
     const minMax = location.zips[state || this.stateShorthand()];
 
     return this.randomInt({ min: minMax.min, max: minMax.max });
@@ -35,15 +38,15 @@ class Location extends ImpostorBase {
 
   buildingNumber({ includeLetters = false, maxBuildingNumber = 1000 } = {}) {
     if (includeLetters) {
-      return this.randomString(1) + this.randomInt({ max: 100 })
+      return this.randomString(1) + this.randomInt({ max: 100 });
     }
 
-    return this.randomInt({ max: maxBuildingNumber })
+    return this.randomInt({ max: maxBuildingNumber });
   }
 
   localCountry() {
     if (Array.isArray(location.country)) {
-      return this.randomArrayElement(location.country)
+      return this.randomArrayElement(location.country);
     }
 
     return location.country;
@@ -63,21 +66,25 @@ class Location extends ImpostorBase {
       zip: this.zip(state),
       state: state,
       county: this.county(),
-      country: this.localCountry()
-    }
+      country: this.localCountry(),
+    };
   }
 }
 
 class Phone extends ImpostorBase {
-  constructor() { super() }
+  constructor() {
+    super();
+  }
 
   mobile() {
-    return "(" + this.randomArrayElement(phone.areaCodes) + ") " + this.randomInt({ max: 999 }) + "-" + this.randomInt({ max: 9999 }); 
+    return "(" + this.randomArrayElement(phone.areaCodes) + ") " + this.randomInt({ max: 999 }) + "-" + this.randomInt({ max: 9999 });
   }
 }
 
 class Internet extends ImpostorBase {
-  constructor() { super() }
+  constructor() {
+    super();
+  }
 
   domain() {
     return this.randomArrayElement(internet.domains);
@@ -88,6 +95,24 @@ class Internet extends ImpostorBase {
   }
 }
 
+class Vehicle extends ImpostorBase {
+  constructor() {
+    super();
+  }
+
+  plate() {
+    return this.randomArrayElement(Object.values(vehicle.statePlateFormats)).replace(/(#|\?)/g, (char) => {
+      if (char === "#") return this.randomInt({ max: 10 });
+
+      return this.randomString(1).toUpperCase();
+    });
+  }
+
+  vin() {
+    return this.randomBytesString(9).toUpperCase().substring(0, 17);
+  }
+}
+
 class en_US extends ImpostorBase {
   constructor() {
     super();
@@ -95,6 +120,7 @@ class en_US extends ImpostorBase {
     this.location = new Location();
     this.phone = new Phone();
     this.internet = new Internet();
+    this.vehicle = new Vehicle();
   }
 }
 
