@@ -3,5 +3,5 @@ const landline = require("./landline");
 
 module.exports = {
   mobile,
-  landline
-}
+  landline,
+};

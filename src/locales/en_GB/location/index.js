@@ -11,5 +11,5 @@ module.exports = {
   country,
   districts,
   postcodes,
-  streets
-}
+  streets,
+};
