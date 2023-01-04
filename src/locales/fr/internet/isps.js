@@ -1,0 +1,15 @@
+module.exports = [
+  "Bouygues Telecom",
+  "DartyBox",
+  "Free (ISP)",
+  "French Data Network",
+  "GrenoblIX",
+  "Haut Débit Radio Régional",
+  "Lyon Internet Exchange",
+  "Neuf Cegetel",
+  "Oleane",
+  "Orange S.A.",
+  "SFR",
+  "Wanadoo",
+  "World-NET",
+]
