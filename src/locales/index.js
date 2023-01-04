@@ -1,8 +1,11 @@
 const ImpostorBase = require("../core/impostorBase");
+
 const en_GB = require("./en_GB");
 
 class LocalesDefinition extends ImpostorBase {
   constructor() {
+    super();
+    
     this.locales = {}
   }
 

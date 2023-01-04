@@ -1,11 +1,9 @@
+const LocalDefinition = require("../../core/LocalDefinition");
+
 const locationDefinition = require("./location");
+const phoneDefinition = require("./phone");
 
-class LocalDefinition {
-  constructor({ location }) {
-    this.address = location;
-  }
-}
-
-const localDefinition = new LocalDefinition({ location: locationDefinition });
-
-module.exports = localDefinition;
+module.exports = new LocalDefinition({ 
+  location: locationDefinition, 
+  phone: phoneDefinition 
+});

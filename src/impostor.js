@@ -7,5 +7,6 @@ module.exports = class Impostor {
     this.#locale = Locales.getLocale(countryCode);
 
     this.address = this.#locale.address;
+    this.phone = this.#locale.phone;
   }
 }
