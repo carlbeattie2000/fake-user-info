@@ -116,10 +116,6 @@ class Vehicle extends ImpostorBase {
   vin() {
     return this.randomBytesString(9).toUpperCase().substring(0, 17);
   }
-
-  taxClass() {
-    return this.randomArrayElement(vehicle.taxClasses);
-  }
 }
 
 class en_GB extends ImpostorBase {
