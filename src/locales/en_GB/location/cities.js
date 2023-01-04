@@ -1,5 +1,3 @@
-const ImpostorBase = require("../../../core/impostorBase");
-
 const cities = [
   "Bath",
   "Birmingham",
