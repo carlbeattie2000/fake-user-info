@@ -60,6 +60,30 @@ class Banking extends ImpostorBase {
       ? this.randomFloat({ max }).toLocaleString(this.#bankingData.currency.countryCode, { style: "currency", currency: this.#bankingData.currency.shorthand })
       : this.randomFloat({ max });
   }
+
+  transactionString() {
+
+  }
+
+  transactionObject() {
+
+  }
+
+  transferString() {
+
+  }
+
+  transferObject() {
+
+  }
+
+  statementString(transactions_amount) {
+
+  }
+
+  statementObject(transactions_amount) {
+
+  }
 }
 
 module.exports = Banking;

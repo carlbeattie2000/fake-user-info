@@ -5,7 +5,7 @@ const impostor = require("../../src/impostor");
 
 const impostorInstance = new impostor({ countryCode: "en_GB" });
 
-test("finance banking test", async (t) => {
+test("finance banking tests", async (t) => {
 
   await t.test("Banking bank should return a string", () => {
     const bank = impostorInstance.finance.banking.bank();
@@ -52,6 +52,34 @@ test("finance banking test", async (t) => {
     equal(floatBalance < 5000, true);
 
     equal(typeof(stringBalance), typeof(""));
+  })
+
+})
+
+test("finance transaction tests", async (t) => {
+
+  await t.test("transactionString should return a string", () => {
+    
+  })
+
+  await t.test("transactionObject should return a object", () => {
+
+  })
+
+  await t.test("transferString should return a string", () => {
+
+  })
+
+  await t.test("transferObject should return a string", () => {
+
+  })
+
+  await t.test("statementString should return an array of strings", () => {
+
+  })
+
+  await t.test("statementObject should return an array of objects", () => {
+
   })
 
 })
