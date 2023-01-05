@@ -65,37 +65,45 @@ test("finance transaction tests", async (t) => {
   })
 
   await t.test("transactionObject should return a object", () => {
-    const transactionObject = impostorInstance.finance.banking.transferObject();
+    const transactionObject = impostorInstance.finance.banking.transactionObject();
 
     equal(typeof(transactionObject), typeof({}))
   })
 
-  await t.test("transferString should return a string", () => {
-    const transferString = impostorInstance.finance.banking.transferString();
-
-    equal(typeof(transferString), typeof(""));
-  })
-
-  await t.test("transferObject should return a string", () => {
-    const transferObject = impostorInstance.finance.banking.transferObject();
-
-    equal(typeof(transferObject), typeof({}));
-  })
-
-  await t.test("statementString should return an array of strings", () => {
+  await t.test("statementString should return an array ", () => {
     const statementStrings = impostorInstance.finance.banking.statementString(5);
 
     equal(Array.isArray(statementStrings), true);
+  })
+
+  await t.test("statementString should contain 5 items", () => {
+    const statementStrings = impostorInstance.finance.banking.statementString(5);
+
     equal(statementStrings.length, 5);
+  })
+
+  await t.test("statementString every item should be a string", () => {
+    const statementStrings = impostorInstance.finance.banking.statementString(5);
+
     equal(statementStrings.every((string) => typeof(string) === typeof("")), true);
   })
 
-  await t.test("statementObject should return an array of objects", () => {
+  await t.test("statementObject should return an array", () => {
     const statementObjects = impostorInstance.finance.banking.statementObject(5);
 
     equal(Array.isArray(statementObjects), true);
+  })
+
+  await t.test("statementObject should contain 5 items", () => {
+    const statementObjects = impostorInstance.finance.banking.statementObject(5);
+
     equal(statementObjects.length, 5);
-    equal(statementStrings.every((object) => typeof(object) === {}), true);
+  })
+
+  await t.test("statementObject every item should be a object", () => {
+    const statementObjects = impostorInstance.finance.banking.statementObject(5);
+
+    equal(statementObjects.every((object) => typeof(object) === typeof({})), true);
   })
 
 })

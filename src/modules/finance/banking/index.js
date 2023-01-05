@@ -55,34 +55,61 @@ class Banking extends ImpostorBase {
     return this.#lastUsedCardTemplate.account_number_template.replace(/#/g, () => this.randomInt({ max: 10 }));
   }
 
-  balance({ max = 5000, formattedString = false } = {}) {
+  randomCurrencyValue({ max = 5000, formattedString = false } = {}) {
     return formattedString
       ? this.randomFloat({ max }).toLocaleString(this.#bankingData.currency.countryCode, { style: "currency", currency: this.#bankingData.currency.shorthand })
-      : this.randomFloat({ max });
+      : parseFloat(this.randomFloat({ max }).toFixed(2));
   }
 
-  transactionString() {
-   
+  balance({ max = 5000, formattedString = false } = {}) {
+    return this.randomCurrencyValue({ max, formattedString });
   }
 
-  transactionObject() {
+  #transactionData(refundWeight = 10) {
+    const refundChance = this.randomInt({ max: 100 });
+    const isRefund = refundChance <= refundWeight;
 
+    const oldBalance = this.balance();
+    const rndAmount = this.randomCurrencyValue({ max: oldBalance });
+  
+    return {
+      isRefund,
+      description: this.randomArrayElement(this.#bankingData.transactionDescriptions),
+      oldBalance,
+      rndAmount,
+      newBalance: isRefund ? parseFloat((oldBalance + rndAmount).toFixed(2)) : parseFloat((oldBalance - rndAmount).toFixed(2)),
+      IN: isRefund ? rndAmount : 0,
+      OUT: isRefund ? 0 : rndAmount
+    }
   }
 
-  transferString() {
-    
+  transactionString(refundChance = 10) {
+    const transactionData = this.#transactionData(refundChance);
+
+    return this.randomStringFormatter(`MM/DD/YYYY `) + 
+    transactionData.description + 
+    ` +${transactionData.IN} -${transactionData.OUT} ${transactionData.oldBalance} ${transactionData.newBalance}`;
   }
 
-  transferObject() {
+  transactionObject(refundChance = 10) {
+    const transactionData = this.#transactionData(refundChance);
 
+    return {
+      date: this.randomStringFormatter("MM/DD/YYYY"),
+      description: transactionData.description,
+      in: transactionData.IN,
+      out: transactionData.OUT,
+      oldBalance: transactionData.oldBalance,
+      newBalance: transactionData.newBalance
+    }
   }
 
-  statementString(transactions_amount) {
-
+  statementString(transactionsAmount = 10) {
+    return [...Array(transactionsAmount)].map(() => this.transactionString());
   }
 
-  statementObject(transactions_amount) {
-
+  statementObject(transactionsAmount = 10) {
+    return [...Array(transactionsAmount)].map(() => this.transactionObject());
   }
 }
 
