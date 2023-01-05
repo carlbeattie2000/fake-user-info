@@ -1,131 +1,41 @@
-# **Generate small to large amount of fake, random data with nodejs**
+# 🗃️ Impostor Js 🗃️
 
-## Address & phone etc is based on the UK format currently.
+## **Generate small to large amount of fake, random data with nodejs**
 
-### Currently Added & Working Generators
 
 ```bash
 npm i impostor_js
-
+```
 or
-
+```bash
 yarn add impostor_js
 ```
 
-## Node.js
+Basic usage
 
 ```javascript
 const impostor = require("impostor_js");
 
-impostor.user.personName(); // Carl
-impostor.user.personEmail(optional: "name1", optional: "name2"); // carlbeattie@gmail.com
-impostor.bankAccounts.createCard(); // random bank card
-impostor.bankAccounts.createMultipleCards(10); // create multiple bank cards
+// create a new instance
+
+const impostor_gen = new impostor({ countryCode: "en_GB" });
+// providing a country code allows you to use country specific data. (phone numbers, cities, vehicle plates)
+
+impostor_gen.locale.location.city();
+impostor_gen.locale.location.street();
+impostor_gen.locale.location.postcode();
+impostor_gen.locale.phone.mobile();
+impostor_gen.locale.vehicle.plate();
+// The .locale of every country code supported provides custom data for that country.
+
+// Another example
+const impostor_gen = new impostor({ countryCode: "en_US" })
+
+impostor_gen.locale.location.city();
+impostor_gen.locale.location.state();
+impostor_gen.locale.location.zip();
 ```
 
-- user
-  - personName("firstName" | "middleName" | "lastName")
-  - phoneNumber("mobile" | "home")
-  - personEmail(optional: "name1", optional: "name2")
-  - dob(optional: maxYearBorn)
-  - jobName
-  - jobPosition
-  - jobIndustry
-  - createUser
-- address
-  - postcode
-  - streetName
-  - doorNumber
-  - city
-  - county
-  - country
-  - createAddress
-- landmarks
-  - landmark
-- entertainment
-  - movieGenre
-  - musicGenre
-  - artist
-  - performer
-- bank
-  - bankName
-  - cardNumber
-  - expiryDate
-  - validFromDate
-  - CVV
-  - pin
-  - sortNumber
-  - accountNumber
-  - accountLoginID
-  - pendingBalance
-  - accountBalance
-  - createCard
-  - createAccount
-  - transactions
-    - createTransaction
-  - flags
-    - flagID
-    - flagReason
-    - createFlag
-  - loans
-    - createLoan
-- crypto
-  - ethereumAddress
-  - bitcoinAddress
-  - bitcoinPrivateKey
-  - coin
-  - coinName
-  - coinPrefix
-- internet
-  - IPV4
-  - IPV6
-  - domainName
-  - URL
-  - arrayDeviceHistory
-  - password
-  - protocol
-  - httpMethod
-  - port
-- company
-  - name
-  - catchPhrase
-  - annualEarnings(optional: max)
-  - annualProfit(optional: earnings)
-  - annualLoss(optional: earnings, profit)
-- computersParts
-  - casePart
-  - motherboard
-  - ram
-  - CPU
-  - GPU
-  - CPUCooling
-  - powerSupply
-  - storage
-  - buildPC
-- deviceInformation
-  - macAddress
-  - systemSKU
-  - softwareBuildID
-  - motherboardID
-  - hardDriveID
-  - operatingSystem
-  - lastBIOSUpdate
-  - createDeviceDetails
-- timeZone
-  - random
-  - randomDateTimeString
-  - randomList
-
-## TODO's
-
-- vehicles
-  - make
-  - model
-  - engine size
-  - year registered
-  - colour
-  - doors
-  - plate
-  - fuel type
-  - type of car
-  - vim
+## Documentation
+- [locale](./docs/locale/index.md)
+- [Modules](./docs/modules/index.md)
