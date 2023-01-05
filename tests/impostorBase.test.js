@@ -13,7 +13,7 @@ describe("Should generate a random hexadecimal value", () => {
     match(actual, expected);
   })
 
-  it("randomInt should generate a random number between a min and max range", () => {
+  it("randomInt should generate a random int between a min and max range", () => {
     const [min, max] = [20, 200];
 
     const actual = imposterBaseTestee.randomInt({ min, max });
@@ -21,6 +21,16 @@ describe("Should generate a random hexadecimal value", () => {
     equal(actual >= min, true);
     equal(actual < max, true);
     equal(isNaN(actual), false);
+  })
+
+  it("randomFloat should generate a random float up to a max", () => {
+    const [min, max] = [20, 200];
+
+    const actual = imposterBaseTestee.randomFloat({ max: 10 });
+
+    equal(actual < max, true);
+    equal(isNaN(actual), false);
+    equal(typeof(actual), typeof(.5));
   })
 
   it("randomDateString should generate a random date string", () => {

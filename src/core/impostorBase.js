@@ -16,6 +16,10 @@ class ImpostorBase {
     return crypto.randomInt(min, max);
   }
 
+  randomFloat({ max = 1.1, fixed=2 }) {
+    return parseFloat((Math.random() * max).toFixed(fixed))
+  }
+
   randomDateString({ minYear=1970, maxYear=2023 } = {}) {
     const yearGapInMs = (maxYear - minYear) * 3.154e+10;
 
