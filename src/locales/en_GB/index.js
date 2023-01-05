@@ -4,6 +4,7 @@ const location = require("./location");
 const phone = require("./phone");
 const internet = require("./internet");
 const vehicle = require("./vehicles");
+const finance = require("./finance");
 
 class Location extends ImpostorBase {
   constructor() {
@@ -114,6 +115,9 @@ class en_GB extends ImpostorBase {
     this.phone = new Phone();
     this.internet = new Internet();
     this.vehicle = new Vehicle();
+
+    // Data
+    this.finance = finance;
   }
 }
 
