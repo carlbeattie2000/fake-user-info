@@ -67,4 +67,13 @@ describe("Should generate a random hexadecimal value", () => {
     equal(typeof(actual), typeof(""));
     equal(actual.length, size * 2);
   })
+
+  it("randomStringFormatter should return a string, that no longer contains any of the original supported templating characters", () => {
+    const templatingCharacters = ["#", "~", "?"];
+
+    const actual = imposterBaseTestee.randomStringFormatter("###~~??");
+
+    equal(templatingCharacters.some((templateChar) => actual.includes(templateChar)), false);
+    equal(typeof(actual), typeof(""));
+  })
 })

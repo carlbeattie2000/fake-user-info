@@ -1,5 +1,7 @@
 const crypto = require("crypto");
 
+const stringTemplateFormatting = require("./stringTemplateFunctions");
+
 class ImpostorBase {
   constructor() {
     this.alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k","l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -50,6 +52,29 @@ class ImpostorBase {
     }
 
     return string;
+  }
+
+  /**
+   * Takes a string that contains characters that are used as templates eg. # | ? and replaces them with random replacements.
+   * 
+   * # - Int
+   * ? - Uppercase char
+   * ~ - Lowercase char
+   * DD - Day
+   * MM - Month
+   * YY - Shorthand year
+   * YYYY - Full year
+   * 
+   * @param {string} template - The template string
+   * @return {string} The template string, with the template values been replaced with the correct data.
+   */
+  randomStringFormatter(template) {
+    return template
+      .replace(/(#|\?|~|DD|MM|(YYYY|YY))/g, (char) => {
+        if (stringTemplateFormatting.hasOwnProperty(char)) {
+          return stringTemplateFormatting[char]();
+        }
+      })
   }
 }
 

@@ -1,7 +1,6 @@
 const ImpostorBase = require("../../core/impostorBase");
 
 const Banking = require("./banking");
-const Transactions = require("./transactions");
 
 class Finance extends ImpostorBase {
   constructor({ localeFinance = undefined } = {}) {
@@ -12,7 +11,6 @@ class Finance extends ImpostorBase {
     }
 
     this.banking = new Banking({ localeFinance });
-    this.transactions = new Transactions({ localeFinance });
   }
 }
 
