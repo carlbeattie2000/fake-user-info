@@ -59,27 +59,43 @@ test("finance banking tests", async (t) => {
 test("finance transaction tests", async (t) => {
 
   await t.test("transactionString should return a string", () => {
-    
+    const transactionString = impostorInstance.finance.banking.transactionString();
+
+    equal(typeof(transactionString), typeof(""));
   })
 
   await t.test("transactionObject should return a object", () => {
+    const transactionObject = impostorInstance.finance.banking.transferObject();
 
+    equal(typeof(transactionObject), typeof({}))
   })
 
   await t.test("transferString should return a string", () => {
+    const transferString = impostorInstance.finance.banking.transferString();
 
+    equal(typeof(transferString), typeof(""));
   })
 
   await t.test("transferObject should return a string", () => {
+    const transferObject = impostorInstance.finance.banking.transferObject();
 
+    equal(typeof(transferObject), typeof({}));
   })
 
   await t.test("statementString should return an array of strings", () => {
+    const statementStrings = impostorInstance.finance.banking.statementString(5);
 
+    equal(Array.isArray(statementStrings), true);
+    equal(statementStrings.length, 5);
+    equal(statementStrings.every((string) => typeof(string) === typeof("")), true);
   })
 
   await t.test("statementObject should return an array of objects", () => {
+    const statementObjects = impostorInstance.finance.banking.statementObject(5);
 
+    equal(Array.isArray(statementObjects), true);
+    equal(statementObjects.length, 5);
+    equal(statementStrings.every((object) => typeof(object) === {}), true);
   })
 
 })

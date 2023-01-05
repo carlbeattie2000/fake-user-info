@@ -61,29 +61,29 @@ class Banking extends ImpostorBase {
       : this.randomFloat({ max });
   }
 
-  // transactionString() {
-  //  "DD/YY DIRECTION COMPANY AMOUNT OLD_BALANCE"
-  // }
+  transactionString() {
+   
+  }
 
-  // transactionObject() {
+  transactionObject() {
 
-  // }
+  }
 
-  // transferString() {
-  //   "DD/YY DIRECTION PAYED/PAYEE REFERENCE AMOUNT OLD_BALANCE NEW_BALANCE"
-  // }
+  transferString() {
+    
+  }
 
-  // transferObject() {
+  transferObject() {
 
-  // }
+  }
 
-  // statementString(transactions_amount) {
+  statementString(transactions_amount) {
 
-  // }
+  }
 
-  // statementObject(transactions_amount) {
+  statementObject(transactions_amount) {
 
-  // }
+  }
 }
 
 module.exports = Banking;
