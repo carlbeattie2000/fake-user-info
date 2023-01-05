@@ -107,3 +107,65 @@ test("finance transaction tests", async (t) => {
   })
 
 })
+
+test("finance crypto tests", async (t) => {
+  await t.test("ethereumAddress should return a string", () => {
+    const ethereumAddress = impostorInstance.finance.crypto.ethereumAddress();
+
+    equal(typeof(ethereumAddress), typeof(""));
+  })
+
+  await t.test("ethereumAddress string length should be 42", () => {
+    const ethereumAddress = impostorInstance.finance.crypto.ethereumAddress();
+
+    equal(ethereumAddress.length, 42);
+  })
+
+  await t.test("bitcoinAddress should return a string", () => {
+    const bitcoinAddress = impostorInstance.finance.crypto.bitcoinAddress();
+
+    equal(typeof(bitcoinAddress), typeof(""));
+  })
+
+  await t.test("bitcoinAddress string length should be equal to 33", () => {
+    const bitcoinAddress = impostorInstance.finance.crypto.bitcoinAddress();
+
+    equal(bitcoinAddress.length, 33);
+  })
+
+  await t.test("bitcoinPrivateKey should return a string", () => {
+    const bitcoinPrivateKey = impostorInstance.finance.crypto.bitcoinPrivateKey();
+
+    equal(typeof(bitcoinPrivateKey), typeof(""));
+  })
+
+  await t.test("bitcoinPrivateKey string length should be equal to 64", () => {
+    const bitcoinPrivateKey = impostorInstance.finance.crypto.bitcoinPrivateKey();
+
+    equal(bitcoinPrivateKey.length, 64);
+  })
+
+  await t.test("cardanoAddress should return a string", () => {
+    const cardanoAddress = impostorInstance.finance.crypto.cardanoAddress();
+
+    equal(typeof(cardanoAddress), typeof(""));
+  })
+
+  await t.test("cardanoAddress string length should be equal to 102", () => {
+    const cardanoAddress = impostorInstance.finance.crypto.cardanoAddress();
+
+    equal(cardanoAddress.length, 102);
+  })
+
+  await t.test("coin should return a string", () => {
+    const coin = impostorInstance.finance.crypto.coin();
+
+    equal(typeof(coin), typeof(""));
+  })
+
+  await t.test("coinPrefix should return a string", () => {
+    const coinPrefix = impostorInstance.finance.crypto.coinPrefix();
+
+    equal(typeof(coinPrefix), typeof(""));
+  })
+})

@@ -13,6 +13,14 @@
     - [Random transaction object](#random-transaction-object)
     - [Random statement strings](#random-statement-strings)
     - [Random statement objects](#random-statement-objects)
+- [Crypto](#crypto)
+    - [Create the instance](#create-the-instance-1)
+    - [Random ethereum address](#random-ethereum-address)
+    - [Random bitcoin address](#random-bitcoin-address)
+    - [Random bitcoin private key](#random-bitcoin-private-key)
+    - [Random cardano address](#random-cardano-address)
+    - [Random coin name](#random-coin-name)
+    - [Random coin prefix](#random-coin-prefix)
 
 ### Banking
 
@@ -117,4 +125,45 @@ impostor_gen.finance.banking.statementObject(2);
     }
   ]
 */
+```
+
+### Crypto
+
+##### Create the instance
+```js
+const impostor_js = require("./src/impostor");
+
+const impostor_gen = new impostor({ countryCode: "en_GB" });
+```
+
+##### Random ethereum address
+```js
+impostor_gen.finance.crypto.ethereumAddress() // 0x7EEF6A3C7A5848605948568697CAA1871CB50B8C
+```
+
+##### Random bitcoin address
+```js
+impostor_gen.finance.crypto.bitcoinAddress() // bc1a7aed59a2f76193f7d77144c314ea1
+```
+
+##### Random bitcoin private key
+```js
+impostor_gen.finance.crypto.bitcoinPrivateKey() 
+// 20A0A0D7E4139923FD2A29071C044CB0255947DECE545AC19E9FAA1AE962B0CB
+```
+
+##### Random cardano address
+```js
+impostor_gen.finance.crypto.cardanoAddress() 
+// addra76d028daf3319dc65b032b763810112f48d5c0531fa797a8e2eafc850e8b15f16950c2b62971806a0a703ecd4d9e9264f
+```
+
+##### Random coin name
+```js
+impostor_gen.finance.crypto.coin() // Dai
+```
+
+##### Random coin prefix
+```js
+impostor_gen.finance.crypto.coinPrefix() // ATOM
 ```
