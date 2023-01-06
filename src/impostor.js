@@ -6,5 +6,6 @@ module.exports = class Impostor {
     this.locale = Locales.getLocale(countryCode);
 
     this.finance = new modules.finance({ localeFinance: this.locale.finance });
+    this.internet = new modules.internet({ localeInternet: this.locale.internet });
   }
 }

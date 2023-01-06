@@ -8,6 +8,8 @@ const impostorInstance = new impostor({ countryCode: "en_GB" });
 test("internet tests", async (t) => {
   const internetModule = impostorInstance.internet;
 
+  t.beforeEach((t) => t.diagnostic(`about to run ${t.name}`));
+
   await t.test("IPV4 should return a string", () => {
     const IPV4 = internetModule.IPV4();
 
@@ -20,16 +22,16 @@ test("internet tests", async (t) => {
     equal(typeof(IPV6), typeof(""));
   })
 
-  await t.test("IPV6 length should be 38", () => {
+  await t.test("IPV6 length should be 39", () => {
     const IPV6 = internetModule.IPV6();
 
-    equal(IPV6.length, 36);
+    equal(IPV6.length, 39);
   })
 
   await t.test("domain should return a string", () => {
     const domain = internetModule.domain();
 
-    equal(typeof(domain), "");
+    equal(typeof(domain), typeof(""));
   })
 
   await t.test("domain should include a valid domain extension", () => {
