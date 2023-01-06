@@ -1,5 +1,5 @@
 const ImpostorBase = require("../../core/impostorBase");
-const { finance } = require("../../locales/en_GB");
+const en_GB = require("../../locales/en_GB");
 
 const Banking = require("./banking");
 const Crypto = require("./crypto");
@@ -9,7 +9,7 @@ class Finance extends ImpostorBase {
     super();
 
     if (!localeFinance) {
-      localeFinance = finance;
+      localeFinance = en_GB.finance;
 
       console.log("Some finance features are not supported in this locale, defaulting to use en_GB for this module!");
     }
