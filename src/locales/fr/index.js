@@ -85,20 +85,6 @@ class Phone extends ImpostorBase {
   }
 }
 
-class Internet extends ImpostorBase {
-  constructor() {
-    super();
-  }
-
-  domain() {
-    return this.randomArrayElement(internet.domains);
-  }
-
-  isp() {
-    return this.randomArrayElement(internet.isps);
-  }
-}
-
 class Vehicle extends ImpostorBase {
   constructor() {
     super();
@@ -125,11 +111,11 @@ class en_GB extends ImpostorBase {
 
     this.location = new Location();
     this.phone = new Phone();
-    this.internet = new Internet();
     this.vehicle = new Vehicle();
 
     // Data
     this.finance = finance;
+    this.internet = internet;
   }
 }
 
