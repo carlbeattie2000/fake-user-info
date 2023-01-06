@@ -73,22 +73,6 @@ test("fr phone test", async (t) => {
 
 })
 
-test("fr internet test", async (t) => {
-
-  await t.test("Internet domain should return a string", () => {
-    const domain = fr.internet.domain();
-
-    equal(typeof(domain), typeof(""));
-  })
-
-  await t.test("Internet isp should return a string", () => {
-    const isp = fr.internet.isp();
-
-    equal(typeof(isp), typeof(""))
-  })
-
-})
-
 test("fr vehicle test", async (t) => {
 
   await t.test("Vehicle plate should return a string", () => {

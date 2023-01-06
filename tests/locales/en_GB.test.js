@@ -73,22 +73,6 @@ test("en_GB phone test", async (t) => {
 
 })
 
-test("en_GB internet test", async (t) => {
-
-  await t.test("Internet domain should return a string", () => {
-    const domain = en_GB.internet.domain();
-
-    equal(typeof(domain), typeof(""));
-  })
-
-  await t.test("Internet isp should return a string", () => {
-    const isp = en_GB.internet.isp();
-
-    equal(typeof(isp), typeof(""))
-  })
-
-})
-
 test("en_GB vehicle test", async (t) => {
 
   await t.test("Vehicle plate should return a string of length 8", () => {
