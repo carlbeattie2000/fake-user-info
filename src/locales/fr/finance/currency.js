@@ -1,6 +1,6 @@
 module.exports = {
-  name: "Euro",
-  shorthand: "EUR",
-  symbol: "€",
-  countryCode: "fr-FR"
-}
+  name: 'Euro',
+  shorthand: 'EUR',
+  symbol: '€',
+  countryCode: 'fr-FR'
+};

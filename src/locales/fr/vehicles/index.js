@@ -1,4 +1,4 @@
-const plateFormat = require("./plate_format");
+const plateFormat = require('./plate_format');
 
 module.exports = {
   plateFormat

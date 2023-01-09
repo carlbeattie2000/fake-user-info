@@ -1,17 +1,17 @@
-const ImpostorBase = require("../../../core/impostorBase");
+const ImpostorBase = require('../../../core/impostorBase');
 
-const coins = require("./coins");
-const coinPrefixes = require("./coin_prefixes");
+const coins = require('./coins');
+const coinPrefixes = require('./coin_prefixes');
 
 class Crypto extends ImpostorBase {
   constructor() { super(); }
 
   ethereumAddress() {
-    return "0x" + this.randomBytesString(20).toUpperCase();
+    return '0x' + this.randomBytesString(20).toUpperCase();
   }
 
   bitcoinAddress() {
-    const prefix = this.randomArrayElement(["1", "3", "bc1"]);
+    const prefix = this.randomArrayElement(['1', '3', 'bc1']);
     const maxLength = 34 - prefix.length;
 
     return prefix + this.randomBytesString(Math.floor(maxLength / 2));
@@ -22,7 +22,7 @@ class Crypto extends ImpostorBase {
   }
 
   cardanoAddress() {
-    return "addr" + this.randomBytesString(50).slice(0, 98);
+    return 'addr' + this.randomBytesString(50).slice(0, 98);
   } 
 
   coin() {

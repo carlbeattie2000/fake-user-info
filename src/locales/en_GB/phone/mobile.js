@@ -1,4 +1,4 @@
 module.exports = {
-  digitCode: "07",
-  countryCode: "+44",
+  digitCode: '07',
+  countryCode: '+44',
 };

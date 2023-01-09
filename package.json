@@ -19,7 +19,6 @@
   ],
   "devDependencies": {
     "csv-parse": "^5.0.4",
-    "eslint": "^8.6.0",
-    "jest": "^27.4.7"
+    "eslint": "^8.6.0"
   }
 }

@@ -1,10 +1,10 @@
-const ImpostorBase = require("../../core/impostorBase");
+const ImpostorBase = require('../../core/impostorBase');
 
-const location = require("./location");
-const phone = require("./phone");
-const internet = require("./internet");
-const vehicle = require("./vehicles");
-const finance = require("./finance");
+const location = require('./location');
+const phone = require('./phone');
+const internet = require('./internet');
+const vehicle = require('./vehicles');
+const finance = require('./finance');
 
 class Location extends ImpostorBase {
   constructor() {
@@ -27,7 +27,7 @@ class Location extends ImpostorBase {
     let prefix = this.randomInt({ max: 96 });
 
     if (prefix < 10) {
-      prefix = "0" + prefix;
+      prefix = '0' + prefix;
     }
 
     const identifier = this.randomInt({ min: 100, max: 1000 });
@@ -52,7 +52,7 @@ class Location extends ImpostorBase {
   }
 
   streetAddress() {
-    return this.buildingNumber() + " " + this.street() + ", " + this.city();
+    return this.buildingNumber() + ' ' + this.street() + ', ' + this.city();
   }
 
   fullAddress() {
@@ -74,13 +74,13 @@ class Phone extends ImpostorBase {
 
   mobile() {
     return this.randomArrayElement(phone.mobile).replace(/#/g, () => {
-      return this.randomInt({ max: 10 })
+      return this.randomInt({ max: 10 });
     });
   }
 
   landline() {
     return this.randomArrayElement(phone.landline).replace(/#/g, () => {
-      return this.randomInt({ max: 10 })
+      return this.randomInt({ max: 10 });
     });
   }
 }
@@ -92,12 +92,12 @@ class Vehicle extends ImpostorBase {
 
   plate() {
     return vehicle.plateFormat.replace(/(#|\?)/g, (char) => {
-      if (char === "#") {
-        return this.randomInt({ max: 10 })
+      if (char === '#') {
+        return this.randomInt({ max: 10 });
       }
 
       return this.randomString(1).toUpperCase();
-    })
+    });
   }
 
   vin() {

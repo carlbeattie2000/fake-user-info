@@ -1,10 +1,10 @@
-const ImpostorBase = require("../../core/impostorBase");
+const ImpostorBase = require('../../core/impostorBase');
 
-const location = require("./location");
-const phone = require("./phone");
-const internet = require("./internet");
-const vehicle = require("./vehicles");
-const finance = require("./finance");
+const location = require('./location');
+const phone = require('./phone');
+const internet = require('./internet');
+const vehicle = require('./vehicles');
+const finance = require('./finance');
 
 class Location extends ImpostorBase {
   constructor() {
@@ -26,7 +26,7 @@ class Location extends ImpostorBase {
   postcode() {
     const prefix = this.randomArrayElement(location.postcodes);
 
-    return prefix + this.randomInt({ max: 100 }) + " " + this.randomInt({ max: 10 }) + this.randomString(2);
+    return prefix + this.randomInt({ max: 100 }) + ' ' + this.randomInt({ max: 10 }) + this.randomString(2);
   }
 
   buildingNumber({ includeLetters = false, maxBuildingNumber = 1000 } = {}) {
@@ -46,7 +46,7 @@ class Location extends ImpostorBase {
   }
 
   streetAddress() {
-    return this.buildingNumber() + " " + this.street() + ", " + this.city();
+    return this.buildingNumber() + ' ' + this.street() + ', ' + this.city();
   }
 
   fullAddress() {
@@ -80,7 +80,7 @@ class Vehicle extends ImpostorBase {
   }
 
   plate() {
-    return this.randomArrayElement(vehicle.plateMemoryTags) + this.randomArrayElement(vehicle.plateAgeIdentifiers) + " " + this.randomString(3).toUpperCase();
+    return this.randomArrayElement(vehicle.plateMemoryTags) + this.randomArrayElement(vehicle.plateAgeIdentifiers) + ' ' + this.randomString(3).toUpperCase();
   }
 
   vin() {

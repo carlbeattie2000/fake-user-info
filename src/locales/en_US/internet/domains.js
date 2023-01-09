@@ -1,9 +1,9 @@
 module.exports = [
-  "us",
-  "com",
-  "biz",
-  "info",
-  "name",
-  "net",
-  "org"
-]
+  'us',
+  'com',
+  'biz',
+  'info',
+  'name',
+  'net',
+  'org'
+];

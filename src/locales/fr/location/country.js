@@ -1,3 +1,3 @@
-const country = ["France", "La France"];
+const country = ['France', 'La France'];
 
 module.exports = country;

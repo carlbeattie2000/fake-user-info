@@ -1,4 +1,4 @@
-const statePlateFormats = require("./state_plate_formats");
+const statePlateFormats = require('./state_plate_formats');
 
 module.exports = {
   statePlateFormats,

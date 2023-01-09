@@ -1,4 +1,4 @@
-const ImpostorBase = require("../../../core/impostorBase");
+const ImpostorBase = require('../../../core/impostorBase');
 
 class Banking extends ImpostorBase {
   #bankingData;
@@ -40,7 +40,7 @@ class Banking extends ImpostorBase {
     const day = this.randomInt({ max: 13 });
     const year = this.randomInt({ min: 19, max: 30 });
 
-    return day < 10 ? "0" + day + "/" + year : day + "/" + year;
+    return day < 10 ? '0' + day + '/' + year : day + '/' + year;
   }
 
   sortCode() {
@@ -57,7 +57,7 @@ class Banking extends ImpostorBase {
 
   randomCurrencyValue({ max = 5000, formattedString = false } = {}) {
     return formattedString
-      ? this.randomFloat({ max }).toLocaleString(this.#bankingData.currency.countryCode, { style: "currency", currency: this.#bankingData.currency.shorthand })
+      ? this.randomFloat({ max }).toLocaleString(this.#bankingData.currency.countryCode, { style: 'currency', currency: this.#bankingData.currency.shorthand })
       : parseFloat(this.randomFloat({ max }).toFixed(2));
   }
 
@@ -80,13 +80,13 @@ class Banking extends ImpostorBase {
       newBalance: isRefund ? parseFloat((oldBalance + rndAmount).toFixed(2)) : parseFloat((oldBalance - rndAmount).toFixed(2)),
       IN: isRefund ? rndAmount : 0,
       OUT: isRefund ? 0 : rndAmount
-    }
+    };
   }
 
   transactionString(refundChance = 10) {
     const transactionData = this.#transactionData(refundChance);
 
-    return this.randomStringFormatter(`MM/DD/YYYY `) + 
+    return this.randomStringFormatter('MM/DD/YYYY ') + 
     transactionData.description + 
     ` +${transactionData.IN} -${transactionData.OUT} ${transactionData.oldBalance} ${transactionData.newBalance}`;
   }
@@ -95,13 +95,13 @@ class Banking extends ImpostorBase {
     const transactionData = this.#transactionData(refundChance);
 
     return {
-      date: this.randomStringFormatter("MM/DD/YYYY"),
+      date: this.randomStringFormatter('MM/DD/YYYY'),
       description: transactionData.description,
       in: transactionData.IN,
       out: transactionData.OUT,
       oldBalance: transactionData.oldBalance,
       newBalance: transactionData.newBalance
-    }
+    };
   }
 
   statementString(transactionsAmount = 10) {

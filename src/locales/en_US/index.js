@@ -1,10 +1,10 @@
-const ImpostorBase = require("../../core/impostorBase");
+const ImpostorBase = require('../../core/impostorBase');
 
-const location = require("./location");
-const phone = require("./phone");
-const internet = require("./internet");
-const vehicle = require("./vehicles");
-const finance = require("./finance");
+const location = require('./location');
+const phone = require('./phone');
+const internet = require('./internet');
+const vehicle = require('./vehicles');
+const finance = require('./finance');
 
 class Location extends ImpostorBase {
   constructor() {
@@ -54,7 +54,7 @@ class Location extends ImpostorBase {
   }
 
   streetAddress() {
-    return this.buildingNumber() + " " + this.street() + ", " + this.city();
+    return this.buildingNumber() + ' ' + this.street() + ', ' + this.city();
   }
 
   fullAddress() {
@@ -78,7 +78,7 @@ class Phone extends ImpostorBase {
   }
 
   mobile() {
-    return "(" + this.randomArrayElement(phone.areaCodes) + ") " + this.randomInt({ max: 999 }) + "-" + this.randomInt({ max: 9999 });
+    return '(' + this.randomArrayElement(phone.areaCodes) + ') ' + this.randomInt({ max: 999 }) + '-' + this.randomInt({ max: 9999 });
   }
 }
 
@@ -89,7 +89,7 @@ class Vehicle extends ImpostorBase {
 
   plate() {
     return this.randomArrayElement(Object.values(vehicle.statePlateFormats)).replace(/(#|\?)/g, (char) => {
-      if (char === "#") return this.randomInt({ max: 10 });
+      if (char === '#') return this.randomInt({ max: 10 });
 
       return this.randomString(1).toUpperCase();
     });
