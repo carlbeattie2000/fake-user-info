@@ -22,7 +22,7 @@ class LocalesDefinition extends ImpostorBase {
       return this.locales[this.randomArrayElement(keys)];
     }
 
-    if (!this.locales.hasOwnProperty(tag)) {
+    if (!Object.prototype.hasOwnProperty.call(this.locales, tag)) {
       return console.log('Country tag does not exist, or support has not been added.');
     }
 

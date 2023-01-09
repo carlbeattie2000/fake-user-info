@@ -122,7 +122,7 @@ class ImpostorBase {
   randomStringFormatter(template) {
     return template
       .replace(/(#|\?|~|DD|MM|(YYYY|YY))/g, (char) => {
-        if (stringTemplateFormatting.hasOwnProperty(char)) {
+        if (Object.prototype.hasOwnProperty.call(stringTemplateFormatting, char)) {
           return stringTemplateFormatting[char]();
         }
       });

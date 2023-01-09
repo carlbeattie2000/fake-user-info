@@ -1,4 +1,4 @@
-const { equal, match } = require('assert');
+const { equal } = require('assert');
 const test = require('node:test');
 
 const en_US = require('../../src/locales/en_US');

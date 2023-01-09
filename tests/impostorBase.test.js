@@ -29,6 +29,7 @@ describe('Should generate a random hexadecimal value', () => {
     const actual = imposterBaseTestee.randomFloat({ max: 10 });
 
     equal(actual < max, true);
+    equal(actual >= min, true);
     equal(isNaN(actual), false);
     equal(typeof(actual), typeof(.5));
   });
@@ -56,6 +57,7 @@ describe('Should generate a random hexadecimal value', () => {
     const actual = imposterBaseTestee.randomBytes(size);
 
     equal(actual.length, size);
+    // eslint-disable-next-line no-undef
     equal(Buffer.isBuffer(actual), true);
   });
 
