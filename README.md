@@ -36,6 +36,11 @@ impostor_gen.locale.location.state();
 impostor_gen.locale.location.zip();
 ```
 
+## List of country codes
+- [en_GB](./docs/locale/en_GB/index.md)
+- [en_US](./docs/locale/en_US/index.md)
+- [fr](./docs/locale/fr/index.md)
+
 ## Documentation
 - [locale](./docs/locale/index.md)
 - [Modules](./docs/modules/index.md)
