@@ -19,7 +19,7 @@ test('timezone tests', async (t) => {
   });
 
   await t.test('dateTimeString returns a date-time string for a timezone that has been passed to the function', () => {
-    const dateTimeString = impostorInstance.timezones.dateTimeString();
+    const dateTimeString = impostorInstance.timezones.dateTimeString('Antarctica/Davis');
 
     match(dateTimeString, /\d+\/\d+\/\d+, \d+:\d+:\d+/gm);
   });
