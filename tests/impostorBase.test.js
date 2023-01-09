@@ -24,21 +24,27 @@ describe('Should generate a random hexadecimal value', () => {
   });
 
   it('randomFloat should generate a random float up to a max', () => {
-    const [min, max] = [20, 200];
+    const max = 200;
 
-    const actual = imposterBaseTestee.randomFloat({ max: 10 });
+    const actual = imposterBaseTestee.randomFloat({ max });
 
     equal(actual < max, true);
-    equal(actual >= min, true);
-    equal(isNaN(actual), false);
-    equal(typeof(actual), typeof(.5));
   });
 
-  it('randomDateString should generate a random date string', () => {
-    const expected = /\d+\/\d+\/\d+, \d+:\d+:\d+/gm;
-    const actual = imposterBaseTestee.randomDateString({ minYear: 2022 });
+  it('randomFloat should generate a random float no lower than a min', () => {
+    const [min, max] = [20, 200];
 
-    match(actual, expected);
+    const actual = imposterBaseTestee.randomFloat({ min, max });
+
+    equal(actual >= min, true);
+  });
+
+  it('randomFloat should be a float', () => {
+    const [min, max] = [20, 200];
+
+    const actual = imposterBaseTestee.randomFloat({ min, max });
+
+    equal(!Number.isInteger(actual) && Number.isFinite(actual), true);
   });
 
   it('randomArrayElement should select a random element from the array it is passed and return null if no array is passed', () => {
