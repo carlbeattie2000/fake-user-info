@@ -1,4 +1,4 @@
-<h1 align="center">🌐 Timezone 🌐</h1>
+<h1 align="center">⏱️ Timezone ⏱️</h1>
 
 - [Timezone](#timezone)
 - [Timezone date-time string](#timezone-date-time-string)
