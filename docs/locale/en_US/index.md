@@ -1,9 +1,23 @@
-# en_US
+# en_US - (United States of America)
 
 Creating the instance
 
 ```js
 const impostor_gen = new impostor({ countryCode: "en_US" });
+```
+
+Person module
+
+```js
+impostor_gen.locale.person.firstName() // John
+impostor_gen.locale.person.firstName(sex?: 'male' | 'female') // Molly
+impostor_gen.locale.person.lastName() // Smith
+impostor_gen.locale.person.fullName() // John Smith
+impostor_gen.locale.person.sex() // male
+impostor_gen.locale.person.dob() // 05/22/1998 
+impostor_gen.locale.person.email() // john_smith@gmail.com
+impostor_gen.locale.person.jobTitle() // Economist
+impostor_gen.locale.person.jobArea() // Finance
 ```
 
 Location module

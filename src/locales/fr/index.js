@@ -6,6 +6,8 @@ const internet = require('./internet');
 const vehicle = require('./vehicles');
 const finance = require('./finance');
 
+const Person = require('./person');
+
 class Location extends ImpostorBase {
   constructor() {
     super();
@@ -116,6 +118,9 @@ class en_GB extends ImpostorBase {
     // Data
     this.finance = finance;
     this.internet = internet;
+
+    // Classes
+    this.person = new Person();
   }
 }
 

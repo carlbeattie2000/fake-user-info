@@ -1,9 +1,23 @@
-# en_US
+# fr - (France)
 
 Creating the instance
 
 ```js
 const impostor_gen = new impostor({ countryCode: "fr" });
+```
+
+Person module
+
+```js
+impostor_gen.locale.person.firstName() // Jean-Paul
+impostor_gen.locale.person.firstName(sex?: 'male' | 'female') // Michelle
+impostor_gen.locale.person.lastName() // Zimmerman
+impostor_gen.locale.person.fullName() // Jean-Paul Zimmerman
+impostor_gen.locale.person.sex() // male
+impostor_gen.locale.person.dob() // 05/22/1998 
+impostor_gen.locale.person.email() // jean-paul_zimmerman@gmail.com
+impostor_gen.locale.person.jobTitle() // Échanger
+impostor_gen.locale.person.jobArea() // Comptabilité
 ```
 
 Location module
