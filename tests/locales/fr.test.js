@@ -88,3 +88,53 @@ test('fr vehicle test', async (t) => {
     equal(vin.length, 17);
   });
 });
+
+test('fr person test', async (t) => {
+  await t.test('firstName returns a string', () => {
+    const firstName = fr.person.firstName();
+
+    equal(typeof(firstName), typeof(''));
+  });
+
+  await t.test('lastName returns a string', () => {
+    const lastName = fr.person.lastName();
+
+    equal(typeof(lastName), typeof(''));
+  });
+
+  await t.test('fullName returns a string', () => {
+    const fullName = fr.person.lastName();
+
+    equal(typeof(fullName), typeof(''));
+  });
+
+  await t.test('sex returns a string', () => {
+    const sex = fr.person.sex();
+
+    equal(typeof(sex), typeof(''));
+  });
+
+  await t.test('dob returns a string', () => {
+    const dob = fr.person.dob();
+
+    equal(typeof(dob), typeof(''));
+  });
+
+  await t.test('email returns a string', () => {
+    const email = fr.person.email();
+
+    equal(typeof(email), typeof(''));
+  });
+
+  await t.test('jobTitle returns a string', () => {
+    const jobTitle = fr.person.jobTitle();
+
+    equal(typeof(jobTitle), typeof(''));
+  });
+
+  await t.test('jobArea returns a string', () => {
+    const jobArea = fr.person.jobArea();
+
+    equal(typeof(jobArea), typeof(''));
+  });
+});

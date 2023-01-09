@@ -95,3 +95,59 @@ test('en_GB vehicle test', async (t) => {
     equal(typeof(taxClass), typeof(''));
   });
 });
+
+test('en_GB person test', async (t) => {
+  await t.test('firstName returns a string', () => {
+    const firstName = en_GB.person.firstName();
+
+    equal(typeof(firstName), typeof(''));
+  });
+
+  await t.test('firstName with a passed gender returns a string', () => {
+    const firstName = en_GB.person.firstName('male');
+
+    equal(typeof(firstName), typeof(''));
+  });
+
+  await t.test('lastName returns a string', () => {
+    const lastName = en_GB.person.lastName();
+
+    equal(typeof(lastName), typeof(''));
+  });
+
+  await t.test('fullName returns a string', () => {
+    const fullName = en_GB.person.lastName();
+
+    equal(typeof(fullName), typeof(''));
+  });
+
+  await t.test('sex returns a string', () => {
+    const sex = en_GB.person.sex();
+
+    equal(typeof(sex), typeof(''));
+  });
+
+  await t.test('dob returns a string', () => {
+    const dob = en_GB.person.dob();
+
+    equal(typeof(dob), typeof(''));
+  });
+
+  await t.test('email returns a string', () => {
+    const email = en_GB.person.email();
+
+    equal(typeof(email), typeof(''));
+  });
+
+  await t.test('jobTitle returns a string', () => {
+    const jobTitle = en_GB.person.jobTitle();
+
+    equal(typeof(jobTitle), typeof(''));
+  });
+
+  await t.test('jobArea returns a string', () => {
+    const jobArea = en_GB.person.jobArea();
+
+    equal(typeof(jobArea), typeof(''));
+  });
+});
