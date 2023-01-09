@@ -9,5 +9,6 @@ module.exports = class Impostor {
     this.internet = new modules.internet({ localeInternet: this.locale.internet });
     this.timezones = new modules.timezones(countryCode.replace('_', '-'));
     this.science = new modules.science();
+    this.color = new modules.colors();
   }
 };
