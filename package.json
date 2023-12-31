@@ -9,6 +9,11 @@
     "url": "https://github.com/carlbeattie2000/impostor.js"
   },
   "scripts": {
+    "clean": "rimraf dist node_modules",
+    "build:clean": "rimraf dist",
+    "build:types": "tsc --project tsconfig.build.json",
+    "build:code": "",
+    "build": "run-s build:clean build:types build:code",
     "test": "jest"
   },
   "keywords": [
@@ -19,6 +24,14 @@
   ],
   "devDependencies": {
     "csv-parse": "^5.0.4",
-    "eslint": "^8.6.0"
-  }
+    "esbuild": "^0.19.11",
+    "eslint": "^8.6.0",
+    "glob": "^10.3.10",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.1.1",
+    "rimraf": "^5.0.5",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "packageManager": "pnpm@8.12.1"
 }
