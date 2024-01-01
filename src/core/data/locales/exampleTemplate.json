@@ -1,0 +1,58 @@
+{
+  "finance": {
+    "banks": ["example"],
+    "cardTemplates": [
+      {
+        "name": "example",
+        "cardNumberTemplates": ["####"],
+        "sortNumberTemplate": "####",
+        "accountNumberTemplate": "###"
+      }
+    ],
+    "currency": {
+      "name": "example",
+      "shorthand": "example",
+      "symbol": "example",
+      "countryCode": "example"
+    },
+    "transactionDescriptions": ["example"]
+  },
+  "internet": {
+    "domainNames": ["example"],
+    "domains": ["example"],
+    "isps": ["example"]
+  },
+  "location": {
+    "cities": ["example"],
+    "counties": ["example"],
+    "countries": ["example"],
+    "districts": ["example"],
+    "postcodes": ["example"],
+    "zipCodes": ["example"],
+    "streets": ["example"]
+  },
+  "person": {
+    "emailExtensions": ["example"],
+    "jobAreas": ["example"],
+    "jobTitles": ["example"],
+    "names": {
+      "firstNames": {
+        "male": ["example"],
+        "female": ["example"]
+      },
+      "lastNames": ["example"]
+    }
+  },
+  "phone": {
+    "mobile": {
+      "digitCode": ["example"],
+      "countryCode": "example"
+    },
+    "landline": ["example"]
+  },
+  "vehicle": {
+    "ageIdentifiers": ["example"],
+    "memoryTags": ["example"],
+    "taxClasses": ["example"]
+  }
+}
