@@ -13,4 +13,6 @@ elif [ formatted == 1  ]; then
 elif [ formatted == 2  ]; then
   echo "Prettier ran into a error"
   exit 1
+else
+  echo "Something out of sync happended"
 fi
