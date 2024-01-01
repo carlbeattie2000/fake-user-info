@@ -1,0 +1,16 @@
+#!/bin/sh
+
+pnpm install
+formatted=$(pnpm run format)
+git add .
+
+if [ formatted == 0  ]; then
+  echo "Completed"
+  exit 0
+elif [ formatted == 1  ]; then
+  echo "Failed to format"
+  exit 1
+elif [ formatted == 2  ]; then
+  echo "Prettier ran into a error"
+  exit 1
+fi
