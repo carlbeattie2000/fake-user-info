@@ -2,11 +2,12 @@
 
 ## **Generate small to large amount of fake, random data with nodejs**
 
-
 ```bash
 npm i impostor_js
 ```
+
 or
+
 ```bash
 yarn add impostor_js
 ```
@@ -29,7 +30,7 @@ impostor_gen.locale.vehicle.plate();
 // The .locale of every country code supported provides custom data for that country.
 
 // Another example
-const impostor_gen = new impostor({ countryCode: "en_US" })
+const impostor_gen = new impostor({ countryCode: "en_US" });
 
 impostor_gen.locale.location.city();
 impostor_gen.locale.location.state();
@@ -37,10 +38,12 @@ impostor_gen.locale.location.zip();
 ```
 
 ## List of country codes
+
 - [en_GB](./docs/locale/en_GB/index.md)
 - [en_US](./docs/locale/en_US/index.md)
 - [fr](./docs/locale/fr/index.md)
 
 ## Documentation
+
 - [locale](./docs/locale/index.md)
 - [Modules](./docs/modules/index.md)

@@ -1,26 +1,33 @@
-const { strictEqual, match } = require('assert');
-const test = require('node:test');
+const { strictEqual, match } = require("assert");
+const test = require("node:test");
 
-const impostor = require('../../src/impostor');
+const impostor = require("../../src/impostor");
 
-const impostorInstance = new impostor({ countryCode: 'en_GB' });
+const impostorInstance = new impostor({ countryCode: "en_GB" });
 
-test('timezone tests', async (t) => {
-  await t.test('timezone returns a string', () => {
+test("timezone tests", async (t) => {
+  await t.test("timezone returns a string", () => {
     const timeZoneString = impostorInstance.timezones.timezone();
 
-    strictEqual(typeof(timeZoneString), typeof(''));
+    strictEqual(typeof timeZoneString, typeof "");
   });
 
-  await t.test('dateTimeString return a date-time string for a random timezone if no parameters have been passed', () => {
-    const dateTimeString = impostorInstance.timezones.dateTimeString();
+  await t.test(
+    "dateTimeString return a date-time string for a random timezone if no parameters have been passed",
+    () => {
+      const dateTimeString = impostorInstance.timezones.dateTimeString();
 
-    strictEqual(typeof(dateTimeString), typeof(''));
-  });
+      strictEqual(typeof dateTimeString, typeof "");
+    },
+  );
 
-  await t.test('dateTimeString returns a date-time string for a timezone that has been passed to the function', () => {
-    const dateTimeString = impostorInstance.timezones.dateTimeString('Antarctica/Davis');
+  await t.test(
+    "dateTimeString returns a date-time string for a timezone that has been passed to the function",
+    () => {
+      const dateTimeString =
+        impostorInstance.timezones.dateTimeString("Antarctica/Davis");
 
-    match(dateTimeString, /\d+\/\d+\/\d+, \d+:\d+:\d+/gm);
-  });
+      match(dateTimeString, /\d+\/\d+\/\d+, \d+:\d+:\d+/gm);
+    },
+  );
 });
