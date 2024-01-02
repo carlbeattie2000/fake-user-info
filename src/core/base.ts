@@ -80,8 +80,48 @@ export class Base {
     return parseFloat((Math.random() * max).toFixed(fixed));
   }
 
+  days_passed(dt: Date) {
+    const current = new Date(dt.getTime()).getMilliseconds();
+    const previous = new Date(dt.getFullYear(), 0, 1).getMilliseconds();
+
+    return Math.ceil((current - previous + 1) / 8.64e7);
+  }
+
   randomDateString(minYear = 1970, maxYear = 2023) {
-    const yearGapInMs = (maxYear - minYear) * 3.154e10;
+    const dateNow = new Date();
+    const currentYear = dateNow.getFullYear();
+    const yearInMs = 3.154e10;
+    const dayInMs = 8.64e7;
+
+    let yearGapInMs = (maxYear - minYear) * yearInMs;
+
+    if (minYear === 0 || maxYear === 0) {
+      throw new Error("Min or max should not be zero!");
+    }
+
+    if (minYear > maxYear) {
+      throw new Error("Min year should not be larger than max!");
+    }
+
+    const maxYearIsCurrentYear = maxYear === currentYear && minYear !== maxYear;
+    const sameYearIsCurrentYear =
+      minYear === maxYear && maxYear === currentYear;
+    const sameYear = minYear === maxYear && maxYear !== currentYear;
+
+    if (sameYearIsCurrentYear) {
+      dateNow.setFullYear(maxYear);
+
+      yearGapInMs = this.days_passed(dateNow) * dayInMs;
+    }
+
+    if (sameYear) {
+      yearGapInMs = yearInMs;
+    }
+
+    if (maxYearIsCurrentYear) {
+      yearGapInMs -= yearInMs;
+      yearGapInMs += this.days_passed(dateNow) * dayInMs;
+    }
 
     return new Date(
       +new Date() - Math.floor(this.randomInt({ max: yearGapInMs })),
