@@ -104,11 +104,11 @@ export class Base {
     }
 
     const maxYearIsCurrentYear = maxYear === currentYear && minYear !== maxYear;
-    const sameYearIsCurrentYear =
+    const sameYearAndCurrentYear =
       minYear === maxYear && maxYear === currentYear;
     const sameYear = minYear === maxYear && maxYear !== currentYear;
 
-    if (sameYearIsCurrentYear) {
+    if (sameYearAndCurrentYear) {
       dateNow.setFullYear(maxYear);
 
       yearGapInMs = this.days_passed(dateNow) * dayInMs;
