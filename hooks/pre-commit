@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Issue: Will re-add all files, so you're unable to only commit selected files
 pnpm install
 formatted=$(pnpm run format)
 git add .
