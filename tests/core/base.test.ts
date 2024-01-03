@@ -36,6 +36,18 @@ test("generates a random int between a min and max value", () => {
   expectTypeOf(randomIntLarge).toBeNumber();
   expect(randomIntLarge).toBeGreaterThanOrEqual(largeMin);
   expect(randomIntLarge).toBeLessThanOrEqual(largeMax);
+
+  let invalidSmallTest = false;
+
+  for (let i = 0; i < 50; i++) {
+    const randomInt = testBase.randomInt({ min: smallMin, max: smallMax });
+
+    if (randomInt < smallMin || randomInt > smallMax) {
+      invalidSmallTest = true;
+    }
+  }
+
+  expect(invalidSmallTest).toBeFalsy();
 });
 
 test("generates a random float between a min and max value", () => {

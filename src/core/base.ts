@@ -1,4 +1,4 @@
-import { randomBytes, randomInt } from "crypto";
+import { randomBytes, randomBytes, randomBytes, randomInt } from "crypto";
 import { templateFunctions } from "./stringTemplates";
 
 export class Base {
@@ -72,8 +72,27 @@ export class Base {
     );
   }
 
-  randomInt({ min = 0, max = 2 } = {}): number {
-    return randomInt(min, max);
+  randomInt({
+    min = 0,
+    max = 2,
+    seed = new Date().getMilliseconds(),
+  } = {}): number {
+    if (min > max) {
+      throw Error("Out of range! Min should not be larger than the max!");
+    }
+
+    const range = max - min;
+
+    const byteSize = Math.ceil(Number(range.toString(2).length) / 8);
+    const randomBytesCreated = Buffer.concat([
+      randomBytes(byteSize),
+      Buffer.from(seed.toString()),
+    ]);
+    const randomValue = BigInt("0x" + randomBytesCreated.toString("hex"));
+
+    const value = Number(BigInt(min) + (randomValue % BigInt(range)));
+
+    return value;
   }
 
   randomFloat(max: number, fixed = 2): number {
