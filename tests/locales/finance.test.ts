@@ -97,6 +97,8 @@ test("generate random list of transaction objects", () => {
 
   expectTypeOf(transactionObjects).toMatchTypeOf<TransactionObject[]>();
   expect(transactionObjects.length).toBeGreaterThan(0);
+  expectTypeOf(transactionObjects[0]).toMatchTypeOf<TransactionObject>();
+  expect(transactionObjects[0]).toHaveProperty("date");
 });
 
 test("generate random list of transaction string", () => {
@@ -104,4 +106,6 @@ test("generate random list of transaction string", () => {
 
   expectTypeOf(transactionStrings).toMatchTypeOf<string[]>();
   expect(transactionStrings.length).toBeGreaterThan(0);
+  expectTypeOf(transactionStrings[0]).toBeString();
+  expect(transactionStrings[0].length).toBeGreaterThan(0);
 });

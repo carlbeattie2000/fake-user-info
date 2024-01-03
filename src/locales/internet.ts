@@ -9,4 +9,12 @@ export class InternetLocale extends Base {
 
     this.internetData = internetData;
   }
+
+  IPV4(): string {
+    return new Array(4).map((_) => this.randomInt({ max: 255 })).join(".");
+  }
+
+  IPV6(): string {
+    return new Array(8).map((_) => this.randomBytesString(2)).join(":");
+  }
 }
