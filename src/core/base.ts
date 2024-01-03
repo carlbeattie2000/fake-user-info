@@ -133,6 +133,10 @@ export class Base {
       throw new Error("Invalid or empty array!");
     }
 
+    if (array.length === 1) {
+      return array[0];
+    }
+
     return array[this.randomInt({ max: array.length })];
   }
 

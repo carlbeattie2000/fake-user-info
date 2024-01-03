@@ -1,6 +1,7 @@
 export interface CardTemplate {
   name: string;
   cardNumberTemplates: string[];
+  cvvTemplate: string;
   sortNumberTemplate: string;
   accountNumberTemplate: string;
 }
@@ -10,6 +11,15 @@ export interface Currency {
   shorthand: string;
   symbol: string;
   countryCode: string;
+}
+
+export interface TransactionObject {
+  date: string;
+  description: string;
+  oldBalance: number;
+  newBalance: number;
+  IN: number;
+  OUT: number;
 }
 
 export interface Finance {

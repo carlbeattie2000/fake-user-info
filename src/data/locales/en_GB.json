@@ -1,0 +1,160 @@
+{
+  "finance": {
+    "banks": [
+      "Ulster Bank",
+      "Bank of Ireland",
+      "NatWest",
+      "HBL Bank UK",
+      "Tesco Bank",
+      "Lloyds Bank",
+      "National Bank of Egypt",
+      "Habib Bank Zurich",
+      "United National Bank",
+      "Metro Bank",
+      "HSBC Bank",
+      "Royal Bank of Scotland",
+      "Barclays Bank",
+      "TSB Bank",
+      "Halifax",
+      "Sainsbury\"s Bank",
+      "Co-operative Bank",
+      "FCE Bank",
+      "Bank of Scotland",
+      "Diamond Bank",
+      "Santander",
+      "Virgin Money",
+      "Clydesdale Bank",
+      "Bank of England"
+    ],
+    "cardTemplates": [
+      {
+        "name": "VISA",
+        "cardNumberTemplates": ["4###############"],
+        "cvvTemplate": "###",
+        "sortNumberTemplate": "######",
+        "accountNumberTemplate": "########"
+      },
+      {
+        "name": "Mastercard",
+        "cardNumberTemplates": ["2###############", "5###############"],
+        "cvvTemplate": "###",
+        "sortNumberTemplate": "######",
+        "accountNumberTemplate": "########"
+      }
+    ],
+    "currency": {
+      "name": "Pound Sterling",
+      "shorthand": "GBP",
+      "symbol": "£",
+      "countryCode": "en-GB"
+    },
+    "transactionDescriptions": [
+      "Adrian Flux Insurance",
+      "All About Prizes",
+      "allpay",
+      "Amazon Prime",
+      "Arcadia Group",
+      "121money.com",
+      "247Moneybox",
+      "Big Savings Club",
+      "Capita",
+      "Cash 4 U Now",
+      "Castle Finance Direct",
+      "CHB",
+      "Completesave.co.uk",
+      "Credit Angel",
+      "Credit Confidential",
+      "Credit Expert",
+      "Domestic and General",
+      "EE",
+      "Ebay",
+      "Equifax",
+      "G I Ltd",
+      "Goldex Inv",
+      "Home bargains",
+      "Home Retail Group",
+      "HomeLet",
+      "Hutchison 3G UK",
+      "ID Guard",
+      "JUSTFAB LTD",
+      "Kingfisher (B&Q)",
+      "Kingfisher (Screwfix)",
+      "Knowhow",
+      "LBK (Ladbrokes)",
+      "Let\"s go rewards",
+      "Littlewoods",
+      "Live Career",
+      "MANGOMONEY.CO.UK",
+      "McAfee",
+      "MICROSOFT *XBOXLIVE",
+      "Mobile Finder",
+      "MoneyPlus Group",
+      "Mr Lender",
+      "My Credit Tracker",
+      "Netflix",
+      "New Day",
+      "Norton",
+      "NOWTV.COM/BILLI",
+      "Nutrajump",
+      "NW Card Services",
+      "NWBS",
+      "Paddy Power",
+      "Payday Express",
+      "Payday UK",
+      "PayPal",
+      "PLAYLOTTERY.COM",
+      "Premium Credit",
+      "Quick Credit Score",
+      "Quick Quid",
+      "Rewards Now",
+      "Shopperdisc",
+      "Sony Ent Network",
+      "Spotify",
+      "Sunny",
+      "TfL",
+      "TheYesCard",
+      "Ticketmaster",
+      "UK Credit",
+      "XPLORE*DISCOUNT-GOLD ",
+      "YOUR SOCIAL INS"
+    ]
+  },
+  "internet": {
+    "domainNames": ["example"],
+    "domains": ["example"],
+    "isps": ["example"]
+  },
+  "location": {
+    "cities": ["example"],
+    "counties": ["example"],
+    "countries": ["example"],
+    "districts": ["example"],
+    "postcodes": ["example"],
+    "zipCodes": ["example"],
+    "streets": ["example"]
+  },
+  "person": {
+    "emailExtensions": ["example"],
+    "jobAreas": ["example"],
+    "jobTitles": ["example"],
+    "names": {
+      "firstNames": {
+        "male": ["example"],
+        "female": ["example"]
+      },
+      "lastNames": ["example"]
+    }
+  },
+  "phone": {
+    "mobile": {
+      "digitCode": ["example"],
+      "countryCode": "example"
+    },
+    "landline": ["example"]
+  },
+  "vehicle": {
+    "ageIdentifiers": ["example"],
+    "memoryTags": ["example"],
+    "taxClasses": ["example"]
+  }
+}

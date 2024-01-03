@@ -26,7 +26,7 @@ const stringTemplateFunctions = new StringTemplatesReplacementFunctions();
 const dateNow = new Date();
 
 export const templateFunctions = {
-  "#": () => stringTemplateFunctions.randomInt({ max: 10 }),
+  "#": () => stringTemplateFunctions.randomInt({ min: 1, max: 10 }),
   "?": () => stringTemplateFunctions.randomCharacter({ uppercase: true }),
   "~": () => stringTemplateFunctions.randomCharacter(),
   DD: () => stringTemplateFunctions.randomIntWithPadding({ max: 32 }),
