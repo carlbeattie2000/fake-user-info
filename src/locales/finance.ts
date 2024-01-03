@@ -125,12 +125,14 @@ export class FinanceLocale extends Base {
   }
 
   transactionObjects(size = 10): TransactionObject[] {
-    return new Array<TransactionObject>(size).map((_) =>
-      this.transactionObject(),
-    );
+    return new Array<TransactionObject>(size)
+      .fill({} as TransactionObject)
+      .map((_) => this.transactionObject());
   }
 
   transactionStrings(size = 10): string[] {
-    return new Array<string>(size).map((_) => this.transactionString());
+    return new Array<string>(size)
+      .fill("")
+      .map((_) => this.transactionString());
   }
 }
