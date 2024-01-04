@@ -84,3 +84,12 @@ export interface Vehicle {
   memoryTags: string[];
   taxClasses: string[];
 }
+
+export interface LocaleData {
+  internet: Internet;
+  finance: Finance;
+  person: Person;
+  location: Location;
+  phone: Phone;
+  vehicle: Vehicle;
+}
