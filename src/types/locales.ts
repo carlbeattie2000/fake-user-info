@@ -45,6 +45,15 @@ export interface Location {
   streets: string[];
 }
 
+export interface AddressObject {
+  buildingNumber: string;
+  street: string;
+  city: string;
+  postcode: string;
+  county: string;
+  country: string;
+}
+
 export interface Names {
   firstNames: {
     male: string[];
