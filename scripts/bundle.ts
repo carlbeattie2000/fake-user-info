@@ -4,7 +4,7 @@ import { globSync } from "glob";
 const target = ["ES2019", "node14.17"];
 
 buildSync({
-  entryPoints: globSync("./src/**/*.ts"),
+  entryPoints: globSync("./src/**/*.{ts,json}"),
   outdir: "./dist/cjs",
   bundle: false,
   sourcemap: false,
@@ -23,5 +23,6 @@ buildSync({
   splitting: true,
   format: "esm",
   target,
+  platform: "node",
   outExtension: { ".js": ".mjs" },
 });
