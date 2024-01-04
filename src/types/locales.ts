@@ -93,3 +93,5 @@ export interface LocaleData {
   phone: Phone;
   vehicle: Vehicle;
 }
+
+export type localeCodes = "enGB";
