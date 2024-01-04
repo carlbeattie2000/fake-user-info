@@ -1,7 +1,6 @@
 import { assertType, expectTypeOf, expect, test } from "vitest";
 import { LocationLocale } from "../../src/locales/location";
 import enGBData from "../../src/data/locales/en_GB.json";
-import { build } from "esbuild";
 import { AddressObject } from "../../src/types/locales";
 
 const testLocation = new LocationLocale(enGBData.location);

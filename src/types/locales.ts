@@ -71,7 +71,7 @@ export interface Person {
 
 export interface Mobile {
   digitCode: string[];
-  countryCode: string[];
+  countryCode: string;
 }
 
 export interface Phone {
