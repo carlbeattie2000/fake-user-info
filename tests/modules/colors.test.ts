@@ -9,13 +9,13 @@ test("Should generate a rgb array, each value should be between 0, 255", () => {
   expectTypeOf(rgbArray).toBeArray();
   expect(rgbArray).toHaveLength(3);
 
-  expect(rgbArray[0]).toBeGreaterThan(0);
+  expect(rgbArray[0]).toBeGreaterThanOrEqual(0);
   expect(rgbArray[0]).toBeLessThanOrEqual(255);
 
-  expect(rgbArray[1]).toBeGreaterThan(0);
+  expect(rgbArray[1]).toBeGreaterThanOrEqual(0);
   expect(rgbArray[1]).toBeLessThanOrEqual(255);
 
-  expect(rgbArray[2]).toBeGreaterThan(0);
+  expect(rgbArray[2]).toBeGreaterThanOrEqual(0);
   expect(rgbArray[2]).toBeLessThanOrEqual(255);
 });
 
@@ -25,13 +25,13 @@ test("Should generate a rgba array, each value should be between 0, 255 expect t
   expectTypeOf(rgbaArray).toBeArray();
   expect(rgbaArray).toHaveLength(4);
 
-  expect(rgbaArray[0]).toBeGreaterThan(0);
+  expect(rgbaArray[0]).toBeGreaterThanOrEqual(0);
   expect(rgbaArray[0]).toBeLessThanOrEqual(255);
 
-  expect(rgbaArray[1]).toBeGreaterThan(0);
+  expect(rgbaArray[1]).toBeGreaterThanOrEqual(0);
   expect(rgbaArray[1]).toBeLessThanOrEqual(255);
 
-  expect(rgbaArray[2]).toBeGreaterThan(0);
+  expect(rgbaArray[2]).toBeGreaterThanOrEqual(0);
   expect(rgbaArray[2]).toBeLessThanOrEqual(255);
 
   expect(rgbaArray[3]).toBeGreaterThanOrEqual(0);
@@ -67,13 +67,13 @@ test("Should generate hsl array, [0...360, 0...100, 0...100]", () => {
   expectTypeOf(hslArray).toBeArray();
   expect(hslArray).toHaveLength(3);
 
-  expect(hslArray[0]).toBeGreaterThan(0);
+  expect(hslArray[0]).toBeGreaterThanOrEqual(0);
   expect(hslArray[0]).toBeLessThanOrEqual(360);
 
-  expect(hslArray[1]).toBeGreaterThan(0);
+  expect(hslArray[1]).toBeGreaterThanOrEqual(0);
   expect(hslArray[1]).toBeLessThanOrEqual(100);
 
-  expect(hslArray[2]).toBeGreaterThan(0);
+  expect(hslArray[2]).toBeGreaterThanOrEqual(0);
   expect(hslArray[2]).toBeLessThanOrEqual(100);
 });
 

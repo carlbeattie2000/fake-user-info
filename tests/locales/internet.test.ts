@@ -8,7 +8,7 @@ test("Should generate a random IPV4", () => {
   const IPV4 = testInternet.IPV4();
 
   expectTypeOf(IPV4).toBeString();
-  expect(IPV4).toMatch(/(\d+\.\d+){3}/gm);
+  expect(IPV4).toMatch(/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/g);
 });
 
 test("Should generate a random IPV6", () => {
