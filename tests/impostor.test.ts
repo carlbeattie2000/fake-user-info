@@ -2,7 +2,7 @@ import { assertType, expectTypeOf, expect, test } from "vitest";
 import { Impostor } from "../src";
 import { Locale } from "../src/locales/locale";
 
-const enGBLocale = new Impostor("enGB");
+const enGBLocale = new Impostor("en_GB");
 
 test("Locale is loaded", () => {
   expectTypeOf(enGBLocale.locale).toMatchTypeOf<Locale>();

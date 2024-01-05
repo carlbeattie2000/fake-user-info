@@ -94,4 +94,4 @@ export interface LocaleData {
   vehicle: Vehicle;
 }
 
-export type localeCodes = "enGB";
+export type localeCodes = "en_GB";

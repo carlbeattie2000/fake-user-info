@@ -6,7 +6,7 @@ import { localeCodes } from "./types/locales";
 export class Impostor extends Base {
   locale: Locale;
 
-  constructor(countryCode: localeCodes = "enGB") {
+  constructor(countryCode: localeCodes = "en_GB") {
     super();
 
     this.locale = locales.get(countryCode);

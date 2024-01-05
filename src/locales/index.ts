@@ -35,6 +35,6 @@ class Locales extends Base {
 
 const locales = new Locales();
 
-locales.addLocale("enGB", enGBData);
+locales.addLocale("en_GB", enGBData);
 
 export default locales;
