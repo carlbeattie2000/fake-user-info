@@ -24,4 +24,8 @@ export class Impostor extends Base {
     this.science = new ScienceModule();
     this.timezone = new TimezoneModule();
   }
+
+  setLocale(countryCode: localeCodes) {
+    this.locale = locales.get(countryCode);
+  }
 }
