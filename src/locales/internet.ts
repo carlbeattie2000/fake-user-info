@@ -1,7 +1,7 @@
 import { Base } from "../core/base";
 import { UserAgent } from "../core/userAgents";
 import { Internet } from "../types/locales";
-import internetGlobalData from "../../src/data/internet.json";
+import internetGlobalData from "../data/internet.json";
 
 export class InternetLocale extends Base {
   internetData: Internet;

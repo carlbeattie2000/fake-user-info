@@ -2,7 +2,7 @@ import { Base } from "../core/base";
 import { LocaleData } from "../types/locales";
 import { Locale } from "./locale";
 
-import enGBData from "../../src/data/locales/en_GB.json";
+import enGBData from "../data/locales/en_GB.json";
 
 class Locales extends Base {
   loadedLocales: {
