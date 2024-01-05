@@ -1,10 +1,11 @@
 import { buildSync } from "esbuild";
 import { globSync } from "glob";
+import { copyDir } from "./dataCopy";
 
 const target = ["ES2019", "node14.17"];
 
 buildSync({
-  entryPoints: globSync("./src/**/*.{ts,json}"),
+  entryPoints: globSync("./src/**/*.ts"),
   outdir: "./dist/cjs",
   bundle: false,
   sourcemap: false,
@@ -25,4 +26,9 @@ buildSync({
   target,
   platform: "node",
   outExtension: { ".js": ".mjs" },
+});
+
+copyDir({
+  inputDir: "./src/data/",
+  outputDir: ["./dist/cjs/data", "./dist/esm/data"],
 });
