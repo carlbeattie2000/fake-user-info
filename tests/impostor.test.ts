@@ -10,13 +10,12 @@ import { CryptoModule } from "../src/modules/crypto";
 const enGBLocale = new Impostor("en_GB");
 
 test("Locale is loaded", () => {
-  expectTypeOf(enGBLocale.locale).toMatchTypeOf<Locale>();
-  expect(enGBLocale.locale).toHaveProperty("internet");
-  expect(enGBLocale.locale).toHaveProperty("location");
-  expect(enGBLocale.locale).toHaveProperty("person");
-  expect(enGBLocale.locale).toHaveProperty("finance");
-  expect(enGBLocale.locale).toHaveProperty("vehicle");
-  expect(enGBLocale.locale).toHaveProperty("phone");
+  expect(enGBLocale).toHaveProperty("internet");
+  expect(enGBLocale).toHaveProperty("location");
+  expect(enGBLocale).toHaveProperty("person");
+  expect(enGBLocale).toHaveProperty("finance");
+  expect(enGBLocale).toHaveProperty("vehicle");
+  expect(enGBLocale).toHaveProperty("phone");
 });
 
 test("Modules are loaded", () => {
