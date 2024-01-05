@@ -2,7 +2,7 @@ import { Base } from "../core/base";
 
 import cryptoData from "../data/crypto.json";
 
-export class Crypto extends Base {
+export class CryptoModule extends Base {
   constructor() {
     super();
   }

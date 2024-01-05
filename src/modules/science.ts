@@ -2,7 +2,7 @@ import { Base } from "../core/base";
 
 import scienceData from "../data/science.json";
 
-export class Science extends Base {
+export class ScienceModule extends Base {
   constructor() {
     super();
   }

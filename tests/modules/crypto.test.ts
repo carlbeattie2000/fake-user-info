@@ -1,7 +1,7 @@
 import { assertType, expectTypeOf, expect, test } from "vitest";
-import { Crypto } from "../../src/modules/crypto";
+import { CryptoModule } from "../../src/modules/crypto";
 
-const testCrypto = new Crypto();
+const testCrypto = new CryptoModule();
 
 test("Should generate a eth address", () => {
   const ethAddress = testCrypto.ethereumAddress();

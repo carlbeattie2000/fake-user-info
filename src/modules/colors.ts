@@ -1,6 +1,6 @@
 import { Base } from "../core/base";
 
-export class Color extends Base {
+export class ColorModule extends Base {
   constructor() {
     super();
   }

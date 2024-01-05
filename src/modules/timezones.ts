@@ -3,7 +3,7 @@ import { Base } from "../core/base";
 import timezoneData from "../data/timezones.json";
 import { localeCodes } from "../types/locales";
 
-export class Timezone extends Base {
+export class TimezoneModule extends Base {
   constructor() {
     super();
   }

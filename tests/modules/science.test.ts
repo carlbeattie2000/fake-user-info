@@ -1,7 +1,7 @@
 import { assertType, expectTypeOf, expect, test } from "vitest";
-import { Science } from "../../src/modules/science";
+import { ScienceModule } from "../../src/modules/science";
 
-const testScience = new Science();
+const testScience = new ScienceModule();
 
 test("Should select a random asteroid", () => {
   const asteroid = testScience.asteroid();

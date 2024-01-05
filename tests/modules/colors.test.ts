@@ -1,7 +1,7 @@
 import { assertType, expectTypeOf, expect, test } from "vitest";
-import { Color } from "../../src/modules/colors";
+import { ColorModule } from "../../src/modules/colors";
 
-const testColor = new Color();
+const testColor = new ColorModule();
 
 test("Should generate a rgb array, each value should be between 0, 255", () => {
   const rgbArray = testColor.rgb();

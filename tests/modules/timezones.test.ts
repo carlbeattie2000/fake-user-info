@@ -1,7 +1,7 @@
 import { assertType, expectTypeOf, expect, test } from "vitest";
-import { Timezone } from "../../src/modules/timezones";
+import { TimezoneModule } from "../../src/modules/timezones";
 
-const testTimezone = new Timezone();
+const testTimezone = new TimezoneModule();
 
 test("Select a random timezone", () => {
   const timezone = testTimezone.timezone();
