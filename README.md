@@ -12,38 +12,33 @@ or
 yarn add impostor_js
 ```
 
+or
+
+```bash
+pnpm add impostor_js
+```
+
 Basic usage
 
 ```javascript
-const impostor = require("impostor_js");
+const { Impostor } = require("impostor_js");
 
 // create a new instance
 
-const impostor_gen = new impostor({ countryCode: "en_GB" });
+const impostor_gen = new impostor("en_GB");
 // providing a country code allows you to use country specific data. (phone numbers, cities, vehicle plates)
 
-impostor_gen.locale.location.city();
-impostor_gen.locale.location.street();
-impostor_gen.locale.location.postcode();
-impostor_gen.locale.phone.mobile();
-impostor_gen.locale.vehicle.plate();
-// The .locale of every country code supported provides custom data for that country.
-
-// Another example
-const impostor_gen = new impostor({ countryCode: "en_US" });
-
-impostor_gen.locale.location.city();
-impostor_gen.locale.location.state();
-impostor_gen.locale.location.zip();
+impostor_gen.location.city();
+impostor_gen.location.street();
+impostor_gen.location.postcode();
+impostor_gen.phone.mobile();
+impostor_gen.vehicle.plate();
 ```
 
 ## List of country codes
 
-- [en_GB](./docs/locale/en_GB/index.md)
-- [en_US](./docs/locale/en_US/index.md)
-- [fr](./docs/locale/fr/index.md)
+- TODO
 
 ## Documentation
 
-- [locale](./docs/locale/index.md)
-- [Modules](./docs/modules/index.md)
+- TODO
