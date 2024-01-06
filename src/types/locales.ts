@@ -67,6 +67,7 @@ export interface Person {
   jobAreas: string[];
   jobTitles: string[];
   names: Names;
+  usernames: string[];
 }
 
 export interface Mobile {

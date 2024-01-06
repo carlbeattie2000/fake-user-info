@@ -60,3 +60,35 @@ test("Select a random job area", () => {
   expectTypeOf(jobArea).toBeString();
   expect(jobArea.length).toBeGreaterThan(0);
 });
+
+test("Generate a random username", () => {
+  const usernameNormal = testPerson.username();
+  const usernameSpecial = testPerson.username({
+    specialCharacters: true,
+    multiword: true,
+  });
+  const usernameCustomSpecial = testPerson.username({
+    specialCharacters: true,
+    multiword: true,
+    customSpecialCharacters: "?~",
+  });
+  const usernameExactLength = testPerson.username({
+    specialCharacters: true,
+    multiword: true,
+    length: 9,
+  });
+
+  expectTypeOf(usernameNormal).toBeString();
+  expect(usernameNormal.length).toBeGreaterThan(0);
+
+  expectTypeOf(usernameSpecial).toBeString();
+  expect(usernameSpecial.length).toBeGreaterThan(0);
+  expect(usernameSpecial).toMatch(/[^A-Za-z0-9]/g);
+
+  expectTypeOf(usernameCustomSpecial).toBeString();
+  expect(usernameCustomSpecial.length).toBeGreaterThan(0);
+  expect(usernameCustomSpecial).toMatch(/[?~]/g);
+
+  expectTypeOf(usernameExactLength).toBeString();
+  expect(usernameExactLength).toHaveLength(9);
+});
