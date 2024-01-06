@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/carlbeattie2000/impostor.js/compare/v2.1.2...v2.2.0) (2024-01-06)
+
+### Features
+
+- username method added to person locale ([437744a](https://github.com/carlbeattie2000/impostor.js/commit/437744a472530d196468e0f4c77f16b3fb1dfd2d))
+
 ### [2.1.2](https://github.com/carlbeattie2000/impostor.js/compare/v2.1.1...v2.1.2) (2024-01-06)
 
 ### [2.1.1](https://github.com/carlbeattie2000/impostor.js/compare/v2.1.0...v2.1.1) (2024-01-06)
