@@ -1,6 +1,6 @@
 {
   "name": "impostor_js",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.mjs",
   "types": "index.d.ts",

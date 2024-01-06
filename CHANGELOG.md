@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/carlbeattie2000/impostor.js/compare/v2.1.0...v2.1.1) (2024-01-06)
+
 ## 2.1.0 (2024-01-06)
 
 ### Features
